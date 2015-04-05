@@ -1,15 +1,13 @@
 <?php namespace App\Http\Controllers;
 
-class HomeController extends Controller {
+class FormController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Home Controller
+	| Form Controller
 	|--------------------------------------------------------------------------
 	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
+	| Handles displaying and submitting the form View.
 	|
 	*/
 
