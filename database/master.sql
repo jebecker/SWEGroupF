@@ -61,6 +61,7 @@ CREATE TABLE section (
 	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
+--DONE :Tyler
 -- Table: master.application
 -- Columns:
 --	app_id	- The unique id assigned to each application. Set by a sequence.
