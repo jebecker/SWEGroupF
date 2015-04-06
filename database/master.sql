@@ -4,7 +4,7 @@ CREATE SCHEMA master;
 
 SET search_path TO master;
 
--- Table: master.user
+-- Table: master.users
 -- Columns:
 --    sso_id          	- Acts as a user name.
 --    id 				-  the id of the user.
@@ -12,7 +12,7 @@ SET search_path TO master;
 --    name 			- Full name of the user.
 --    regDate  			- The time when an account is first created. Set automatically by a default value.
 CREATE TYPE ROLE AS ENUM ('student', 'instructor', 'admin');
-CREATE TABLE user (
+CREATE TABLE users (
 	sso_id	VARCHAR(6) PRIMARY KEY,
 	id 	INTEGER NOT NULL,
 	user_type ROLE NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE authentication (
 	sso_id 			VARCHAR(6) PRIMARY KEY,
 	password_hash 	CHAR(40) NOT NULL,
 	salt 			CHAR(40) NOT NULL,
-	FOREIGN KEY (sso_id) REFERENCES user(sso_id)
+	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
 -- Table: master.course
@@ -47,14 +47,14 @@ CREATE TABLE course (
 -- Columns:
 --    sectionNum  - The section number of the course.
 --    course_id	- Identifies the course the section is a part of. References course.
---    sso_id 		- The sso_id of the instructor teaching the course. References user.
+--    sso_id 		- The sso_id of the instructor teaching the course. References users.
 CREATE TABLE section (
 	sectionNum 	INTEGER,
 	course_id		INTEGER NOT NULL,
 	sso_id 		VARCHAR(6) NOT NULL,
 	PRIMARY KEY (sectionNum, course_id),
 	FOREIGN KEY (course_id) REFERENCES course(course_id),
-	FOREIGN KEY (sso_id) REFERENCES user(sso_id)
+	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
 -- Table: master.application
@@ -107,13 +107,13 @@ CREATE TABLE application (
 	eSig	VARCHAR(30) NOT NULL,
 	eDate	VARCHAR(30) NOT NULL,
 	submissionDate	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	FOREIGN KEY (sso_id) REFERENCES user(sso_id)
+	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
 -- Table: master.comment
 -- Columns:
 --	comment_id	- A unique ID for each comment. Set by a sequence.
---	sso_id 	- The sso_id of the instructor who made the comment. References user.
+--	sso_id 	- The sso_id of the instructor who made the comment. References users.
 --	app_id	- The ID of the application which the comment is attached to. References application.
 --	date		- The time at which the comment was created. Set automatically by a default value.
 CREATE TABLE comment (
@@ -121,14 +121,14 @@ CREATE TABLE comment (
 	sso_id	VARCHAR(6) NOT NULL,
 	app_id	SERIAL NOT NULL,
 	date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	FOREIGN KEY (sso_id) REFERENCES user(sso_id),
+	FOREIGN KEY (sso_id) REFERENCES users(sso_id),
 	FOREIGN KEY (app_id) REFERENCES application(app_id)
 );
 
 -- Table: master.log
 -- Columns:
 --    log_id     - A unique ID for the log entry. Set by a sequence.
---    sso_id   - The user whose action generated this log entry. References user.
+--    sso_id   - The user whose action generated this log entry. References users.
 --    ip_address - The IP address of the user at the time the log was entered.
 --    log_date   - The date of the log entry. Set automatically by a default value.
 --    action     - What the user did to generate a log entry (i.e., "logged in").
@@ -138,5 +138,5 @@ CREATE TABLE log (
 	ip_address 	VARCHAR(15) NOT NULL,
 	log_date 	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	action 		VARCHAR(50) NOT NULL,
-	FOREIGN KEY (sso_id) REFERENCES user(sso_id)
+	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
