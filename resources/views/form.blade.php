@@ -62,7 +62,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#apply">Apply</a>
+                    <a href="/">Login</a>
                 </li>
             </ul>
         </div>
@@ -72,10 +72,10 @@
 </nav>
 
 <!-- Header -->
-<header>
+<header style="height:100vh">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Welcome To The TA/PLA Application Form!</div>
+            <div class="intro-lead-in"">Welcome To The TA/PLA Application Form!</div>
             <a href="#apply" class="page-scroll btn btn-xl">Apply Now!</a>
         </div>
     </div>
@@ -267,9 +267,9 @@
                     <li style="margin-left:50px">New TAs, ITAs, and PLAs who have received an appointment, are required to participate in the GATO (Graduate Assistant Teaching Orientation), which is offered just prior to the start of fall and winter terms. (You do not need to attend more than once.)
                         <div class="radio">
                             <label>Requirement Met:</label>
-                                <input type="radio" name="gatoRequirementMet" id="gatoMet">
+                                <input type="radio" name="gatoRequirement" id="gatoMet">
                             <label>Will Attend in Aug/Jan (If selected):</label>
-                                <input class="col-md-offset-2" type="radio" name="gatoRequirementWillAttend" id="willAttend">
+                                <input class="col-md-offset-2" type="radio" name="gatoRequirement" id="gatoWillAttend">
                         </div>
                     </li>
                 </div>
@@ -285,18 +285,18 @@
                     <li style="margin-left:50px">Prior to becoming a TA, any ITA (International Teaching Assistant) who received their primary and secondary education in a country where English is not the principal language <b style="text-decoration:underline">are required by law to be assessed for English proficiency (SPEAK test). If you do not register for and satisfy applicable language assessment requirements, you will not be eligible to accept a TA appointment.</b> Arrangements for language assessments must be made before the end of the semester prior to accepting a TA position.
                         <div class="radio">
                             <label>Requirement Met:</label>
-                            <input type="radio" name="speakRequirementMet" id="speakMet">
+                            <input type="radio" name="speakRequirement" id="speakMet">
                             <label>Registered for speak (date):</label>
-                            <input type="text" class="form-control" name="speakRequirementDate" id="speakDate"  placeholder="mm/dd/yyyy">
+                            <input type="text" class="form-control" name="speakRequirement" id="speakDate"  placeholder="mm/dd/yyyy">
                         </div>
                     </li>
                     <li style="margin-left:50px">ONITA, is a <b style="text-decoration: underline">requirement for all international TAs and PLAs</b> who have not previously attended this orientation. You cannot have a TA/PLA appointment until this requirement has been met.
                         <br>
                         <div class="radio">
                             <label>Requirement Met:</label>
-                            <input type="radio" name="onitaRequirementMet" id="onitaMet">
+                            <input type="radio" name="onitaRequirement" id="onitaMet">
                             <label>Will Attend in Aug/Jan (If selected):</label>
-                            <input class="col-md-offset-2" type="radio" name="onitaRequirementWillAttend" id="willAttend">
+                            <input class="col-md-offset-2" type="radio" name="onitaRequirement" id="onitaWillAttend">
                         </div>
                     </li>
                 </div>
