@@ -46,6 +46,7 @@ CREATE TABLE course (
 	TA_PLA_limit		INTEGER
 );
 
+-- DONE :Tyler
 -- Table: master.section
 -- Columns:
 --    sectionNum  - The section number of the course.
