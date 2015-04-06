@@ -4,6 +4,7 @@ CREATE SCHEMA master;
 
 SET search_path TO master;
 
+-- DONE : Tyler
 -- Table: master.users
 -- Columns:
 --    sso_id          	- Acts as a user name.
@@ -20,6 +21,7 @@ CREATE TABLE users (
 	regDate	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+-- DONE : Not necessary :Tyler
 -- Table: master.authentication
 -- Columns:
 --    sso_id      - The user name tied to authentication info. References user.
@@ -32,6 +34,7 @@ CREATE TABLE authentication (
 	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
+-- DONE :Tyler
 -- Table: master.course
 -- Columns:
 --    course_id      	- An id to uniquely identify the course.
