@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration {
 		Schema::create('users', function(Blueprint $table)
 		{
 			$table->string('sso_id')->unique();
-			$table->string('name');
+			$table->string('name')->unique();
 			$table->enum('user_type', ['student','instructor','admin']);
 			$table->rememberToken();
 			$table->timestamps();
@@ -40,7 +40,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('users');
+		Schema::dropIfExists('users');
 	}
 
 }
