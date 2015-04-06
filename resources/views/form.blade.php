@@ -99,7 +99,7 @@
     <form class="form-inline">
         <div class="container">
             <!--radio buttons to pick school standing option-->
-                 <div class="form-group">
+                 <div class="form-group text-center">
                         <div class="radio">
                             <label>
                                 <input type="radio" name="schoolStandingOption" id="graduateStudent" value="gradStudent">
@@ -176,11 +176,6 @@
      </form>   
     </section>
 
-    
-
-   
-
-    
     <footer>
         <div class="container">
             <div class="row">
