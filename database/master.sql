@@ -115,6 +115,7 @@ CREATE TABLE application (
 	FOREIGN KEY (sso_id) REFERENCES users(sso_id)
 );
 
+-- DONE :Tyler
 -- Table: master.comment
 -- Columns:
 --	comment_id	- A unique ID for each comment. Set by a sequence.
