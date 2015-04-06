@@ -9,15 +9,25 @@ class CreateUsersTable extends Migration {
 	 * Run the migrations.
 	 *
 	 * @return void
+	 *
+	 * -- Table: master.user
+	 * -- Columns:
+	 * --    sso_id          	- Will match what is in LDAP. Also, Uniquely identifies a user.
+	 * --    name 				- Full name of the user.
+	 * --    user_type          - Identifies the role of the user, which is critical in determining their level of access.
+	 * --	 rememberToken		- Used to keep a user logged in. Laravel magic spaghetti.
+	 *
+	 *     ***timestamps*****
+	 * -- 	 created_at			- The time when an account is first created. Set automatically by laravel.
+	 *  -- 	 updated_at			- The time when an account is last updated. Set automatically by laravel.
 	 */
 	public function up()
 	{
 		Schema::create('users', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->string('sso_id')->unique();
 			$table->string('name');
-			$table->string('email')->unique();
-			$table->string('password', 60);
+			$table->enum('user_type', ['student','instructor','admin']);
 			$table->rememberToken();
 			$table->timestamps();
 		});

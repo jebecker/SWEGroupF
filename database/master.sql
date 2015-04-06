@@ -8,7 +8,7 @@ SET search_path TO master;
 -- Columns:
 --    sso_id          	- Acts as a user name.
 --    id 				-  the id of the user.
---    user-type          - Identifies the role of the user, which is critical in determining their level of access.
+--    user_type          - Identifies the role of the user, which is critical in determining their level of access.
 --    name 			- Full name of the user.
 --    regDate  			- The time when an account is first created. Set automatically by a default value.
 CREATE TYPE ROLE AS ENUM ('student', 'instructor', 'admin');
