@@ -10,7 +10,7 @@ class CreateUsersTable extends Migration {
 	 *
 	 * @return void
 	 *
-	 * -- Table: master.user
+	 * -- Table: public.user
 	 * -- Columns:
 	 * --    sso_id          	- Will match what is in LDAP. Also, Uniquely identifies a user.
 	 * --    name 				- Full name of the user.
