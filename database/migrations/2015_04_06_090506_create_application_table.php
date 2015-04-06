@@ -67,7 +67,7 @@ class CreateApplicationTable extends Migration {
 			$table->boolean('gato_status');
 			$table->boolean('onita_status')->nullable();
 			$table->boolean('submitted');
-			$table->nullableTimestamps('date_submitted');
+			$table->timestamp('date_submitted')->nullable();
 			$table->timestamps();
 
 			//constraints
@@ -87,7 +87,8 @@ class CreateApplicationTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('application');
+
+		Schema::dropIfExists('application');
 	}
 
 }
