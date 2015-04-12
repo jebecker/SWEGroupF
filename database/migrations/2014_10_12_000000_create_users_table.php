@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration {
 		{
 			$table->string('sso_id')->unique();
 			$table->string('name')->unique();
+			$table->string('password', 64);
 			$table->enum('user_type', ['student','instructor','admin']);
 			$table->rememberToken();
 			$table->timestamps();
