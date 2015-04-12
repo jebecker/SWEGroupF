@@ -10,6 +10,9 @@ class Section extends Model {
     //Turn off increments because our table users a custom primary key.
     public $incrementing  = false;
 
-    //This table needs no guarded or hidden attributes. Done.
+    //Guard timestamps. All else fillable.
+    protected $guarded = ['created_at', 'updated_at'];
+
+
 
 }
