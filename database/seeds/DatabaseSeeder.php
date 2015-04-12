@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
+		//Example. Leave this here.
 		// $this->call('UserTableSeeder');
 	}
 
