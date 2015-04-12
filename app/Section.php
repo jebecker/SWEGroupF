@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Section extends Model {
 
 	//The database table that this model uses
-    protected $table = 'sections';
+    protected $table = 'section';
 
     //Turn off increments because our table users a custom primary key.
     public $incrementing  = false;
