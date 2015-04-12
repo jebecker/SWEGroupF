@@ -44,7 +44,7 @@ class CreateApplicationTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('application', function(Blueprint $table)
+		Schema::create('applications', function(Blueprint $table)
 		{
 			$table->increments('app_id');
 			$table->string('applicant_id');
@@ -88,7 +88,7 @@ class CreateApplicationTable extends Migration {
 	public function down()
 	{
 
-		Schema::dropIfExists('application');
+		Schema::dropIfExists('applications');
 	}
 
 }
