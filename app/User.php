@@ -17,12 +17,15 @@ class User extends Model implements AuthenticatableContract {
 	 */
 	protected $table = 'users';
 
+	//make sure it doesn't try to increment to PK.
+	public $incrementing = false;
+
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'user_type'];
+	protected $fillable = ['sso_id', 'name', 'email', 'user_type', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
