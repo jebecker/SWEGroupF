@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Course;
+use App\Section;
 
 class DatabaseSeeder extends Seeder {
 
@@ -23,6 +24,9 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('CourseTableSeeder');
 		$this->command->info('Course table seeded!');
+
+		$this->call('SectionTableSeeder');
+		$this->command->info('Section table seeded!');
 
 	}
 
@@ -56,6 +60,13 @@ class UserTableSeeder extends Seeder {
 			'user_type' => 'admin',
 			'password' => bcrypt('admin')
 		]);
+
+		User::create([  'sso_id' => 'guilliamsd',
+			'name'   => 'Donald "Joe" Guilliams',
+			'email'  => 'guilliamsd@missouri.edu',
+			'user_type' => 'instructor',
+			'password' => bcrypt('fred')
+		]);
 	}
 }
 
@@ -77,5 +88,35 @@ class CourseTableSeeder extends Seeder {
 		Course::create([ 	'course_name' => 'cs3050',
 							'ta_pla_limit' => '2'
 		]);
+
+		Course::create([ 	'course_name' => 'cs4320',
+							'ta_pla_limit' => '2'
+		]);
 	}
 }
+
+class SectionTableSeeder extends Seeder {
+
+	public function run()
+	{
+		//This line clears the current entries in the User table.
+		DB::table('section')->delete();
+
+		Section::create([	'course_id' => '1', //cs1050
+							'instructor' => 'guilliamsd', //Joe Guilliams
+							'section' => 'G'
+		]);
+
+		Section::create([	'course_id' => '2', //cs2050
+							'instructor' => 'guilliamsd', //Joe Guilliams
+							'section' => 'A'
+		]);
+
+		Section::create([	'course_id' => '4', //cs4320
+							'instructor' => 'scottg', //Grant Scott
+							'section' => 'A'
+		]);
+	}
+}
+
+
