@@ -30,8 +30,8 @@ class CreateApplicationTable extends Migration {
 	--	other_employment	- Other places the applicant currently works at.
 	--	speak_score			- The score on the applicant received on the SPEAK test; international students only.
 	--	sem_last_speak 		- The semester in which the applicant last took the SPEAK test; international students only.
-	--	GATO_status			- 1 if the student has met the GATO requirement, 0 if they will attend in Aug/Jan if selected.
-	--	ONITA_status		- 1 if the student has met the ONITA requirement, 0 if they will attend in Aug/Jan if selected; international students only.
+	--	GATO_status			- true if the student has met the GATO requirement, false if they will attend in Aug/Jan if selected.
+	--	ONITA_status		- true if the student has met the ONITA requirement, false if they will attend in Aug/Jan if selected; international students only.
 	 *        HOW ARE WE IMPLEMENTING THIS? (eSig)
 	--	eSig				- The signature of  the applicant.
 	--	eDate 				- The date corresponding to the signature.
