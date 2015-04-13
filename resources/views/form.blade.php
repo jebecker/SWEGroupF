@@ -64,6 +64,9 @@
                 <li>
                     <a href="/">Login</a>
                 </li>
+                <li>
+                    <a href="">Admin</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

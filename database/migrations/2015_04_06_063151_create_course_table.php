@@ -14,7 +14,7 @@ class CreateCourseTable extends Migration {
 	-- Columns:
 	--    course_id     - An id to uniquely identify the course. NOT necessarily the same course number from Myzou.
 	--    course_name 	- The name of the course.
-	-- 	TA_PLA_limit 	- The maximum number of TA's/PLA's that can be assigned to a course.
+	--	  TA_PLA_limit 	- The maximum number of TA's/PLA's that can be assigned to a course.
 	 * 		-- does not autoincrement and is unsigned.
 	 *
 	 *     ***timestamps*****
