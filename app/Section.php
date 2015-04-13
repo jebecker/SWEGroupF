@@ -2,14 +2,15 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Section extends Model {
+class Section extends Model
+{
 
-	//The database table that this model uses
-    protected $table = 'sections';
+    //The database table that this model uses
+    protected $table = 'section';
 
     //Turn off increments because our table users a custom primary key.
-    public $incrementing  = false;
+    public $incrementing = false;
 
-    //This table needs no guarded or hidden attributes. Done.
-
+    //Guard timestamps. All else fillable.
+    protected $guarded = ['created_at', 'updated_at'];
 }
