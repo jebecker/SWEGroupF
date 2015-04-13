@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,14 +11,14 @@
     <title>TA/PLA Application Form</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="startbootstrap-agency-1.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- link to incorporate css with framework
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     -->
 
     <!-- Custom CSS -->
-    <link href="startbootstrap-agency-1.0.3/css/agency.css" rel="stylesheet">
+    <link href="/css/agency.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -151,10 +150,10 @@
 
 
 <!-- jQuery -->
-<script src="startbootstrap-agency-1.0.3/js/jquery.js"></script>
+<script src="/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="startbootstrap-agency-1.0.3/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <!-- script tag to integrate js with framework
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -162,10 +161,12 @@
 
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="startbootstrap-agency-1.0.3/js/classie.js"></script>
-<script src="startbootstrap-agency-1.0.3/js/cbpAnimatedHeader.js"></script>
+<script src="/js/classie.js"></script>
+<script src="/js/cbpAnimatedHeader.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="startbootstrap-agency-1.0.3/js/agency.js"></script>
+<script src="/js/agency.js"></script>
+
+</body>
 
 </body>
