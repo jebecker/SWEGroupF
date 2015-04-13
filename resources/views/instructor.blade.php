@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TA/PLA Application Form</title>
+    <title>Instructor Page</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">TA/PLA Application</a>
+            <a class="navbar-brand page-scroll" href="#page-top">Instructor Page</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,8 +74,8 @@
 <header style="height:100vh">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Welcome To The TA/PLA Application Form!</div>
-        <a href="#instructor" class="page-scroll btn btn-xl">This will be gone later!</a>
+            <div class="intro-lead-in">Welcome To Instructor Page</div>
+        <a href="#instructor" class="page-scroll btn btn-xl">Get Started</a>
     </div>
     </div>
 </header>
