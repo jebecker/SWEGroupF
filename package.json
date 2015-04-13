@@ -1,6 +1,15 @@
 {
   "devDependencies": {
     "gulp": "^3.8.8",
-    "laravel-elixir": "*"
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.2",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-util": "^3.0.4",
+    "laravel-elixir": "*",
+    "merge-stream": "^0.1.7",
+    "notify-send": "^0.1.2",
+    "readable-stream": "^1.0.33"
   }
 }
