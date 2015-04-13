@@ -15,6 +15,9 @@ class Application extends Model {
 
     protected $guarded = ['app_id','created_at', 'updated_at'];
 
+    //need to rename the primary key since it is not called 'id'
+    protected $primaryKey = 'app_id';
+
 
 
 
