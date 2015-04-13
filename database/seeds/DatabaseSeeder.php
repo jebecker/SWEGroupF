@@ -5,6 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Course;
 use App\Section;
+use App\Application;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder {
 
@@ -28,6 +30,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('SectionTableSeeder');
 		$this->command->info('Section table seeded!');
 
+		$this->call('ApplicationTableSeeder');
+		$this->command->info('Application table seeded!');
+
 	}
 
 }
@@ -43,6 +48,13 @@ class UserTableSeeder extends Seeder {
 		User::create([  'sso_id' => 'twn346',
 			'name'   => 'Tyler Nivin',
 			'email'  => 'twn346@mail.missouri.edu',
+			'user_type' => 'student',
+			'password' => bcrypt('secret')
+		]);
+
+		User::create([  'sso_id' => 'jebd4f',
+			'name'   => 'UI Bitch',
+			'email'  => 'UIBITCH@mail.missouri.edu',
 			'user_type' => 'student',
 			'password' => bcrypt('secret')
 		]);
@@ -118,5 +130,51 @@ class SectionTableSeeder extends Seeder {
 		]);
 	}
 }
+
+class ApplicationTableSeeder extends Seeder {
+
+	public function run()
+	{
+		//This line clears the current entries in the User table.
+		DB::table('application')->delete();
+
+		Application::create([	'applicant_id' => 'twn346',
+								'application_type' => 'PLA',
+								'name' => 'Tyler Nivin',
+								'student_id' => '12345933',
+								'gpa' => '4.0', //LOL Lies
+								'pla_info' => 'BS CS SR',
+								'phone_number' => '573-366-8477',
+								'email' => 'twn346@mail.missouri.edu',
+								'graduation_date' => Carbon::createFromDate(2016,12),
+								'courses_teaching' => 'CS1050',
+								'courses_taught' => 'cs1050,cs2050,OOP',
+								'courses_and_grades' => 'cs1050 => A, cs2050 => A', //More Lies
+								'gato_status' => true,
+								'submitted' => true,
+								'date_submitted' => Carbon::now()
+		]);
+
+		Application::create([	'applicant_id' => 'jebd4f',
+								'application_type' => 'TA',
+								'name' => 'UI Bitch',
+								'student_id' => '11111111',
+								'gpa' => '4.0', //LOL Lies
+								'degree_track' => 'Masters',
+								'advisor_name' => 'Dr. Grant Scott',
+								'phone_number' => '222-222-2222',
+								'email' => 'jebd4f@mail.missouri.edu',
+								'graduation_date' => Carbon::createFromDate(2015, 5),
+								'courses_and_grades' => 'cs1050 => A, cs2050 => A', //More Lies
+								'gato_status' => true,
+								'onita_status' => true,
+								'submitted' => true,
+								'date_submitted' => Carbon::now()
+		]);
+	}
+}
+
+
+
 
 
