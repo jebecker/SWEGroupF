@@ -13,7 +13,7 @@ class Application extends Model {
 
     // Columns that can NOT be mass-assigned.
 
-    protected $guarded = ['app_id','submitted','date_submitted', 'created_at', 'updated_at'];
+    protected $guarded = ['app_id','created_at', 'updated_at'];
 
 
 
