@@ -17,6 +17,8 @@ Route::get('form', 'FormController@index');
 
 Route::get('admin', 'AdminController@index');
 
+Route::get('instructor', 'InstructorController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
