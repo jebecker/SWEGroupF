@@ -32,19 +32,56 @@ class Authenticate {
 	 */
 	public function handle($request, Closure $next)
 	{
+		// Needs cleaned up, was unable to figure out why a switch statement was not working prior to sprint2 deadline.
 		if ($this->auth->guest())
 		{
+
 			if ($request->ajax())
 			{
-				return response('Unauthorized.', 401);
+				return response ('Unauthorized.', 401);
 			}
+
 			else
 			{
 				return redirect()->guest('auth/login');
 			}
+
 		}
 
-		return $next($request);
+		elseif ($this->auth->user()->user_type == 'admin')
+		{
+			// Uncomment to user_type displayed
+			// echo "user_type: admin\n";
+
+			// Adequate because admin can access any page.
+			return $next($request);
+		}
+
+		elseif ($this->auth->user()->user_type == 'instructor')
+		{
+			// Uncomment to user_type displayed
+			// echo "user_type: instructor\n";
+
+			// Needs logic to restrict access to instructor viewable pages.
+			return $next($request);
+		}
+
+		elseif ($this->auth->user()->user_type == 'student')
+		{
+			// Uncomment to user_type displayed
+			// echo "user_type: student\n";
+
+			// Needs logic to restrict access to student viewable pages.
+			return $next($request);
+		}
+
+		else
+		{
+			// The default response is to treat anything but a valid user with a user_type
+			// as a guest. Can later differentiate from guest() if desired.
+			return redirect()->guest( 'auth/login' );
+		}
+
 	}
 
 }
