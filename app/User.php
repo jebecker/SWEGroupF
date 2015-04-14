@@ -20,6 +20,9 @@ class User extends Model implements AuthenticatableContract {
 	//make sure it doesn't try to increment to PK.
 	public $incrementing = false;
 
+	//set the PK for this table.
+	protected $primaryKey = 'sso_id';
+
 	/**
 	 * The attributes that are mass assignable.
 	 *
