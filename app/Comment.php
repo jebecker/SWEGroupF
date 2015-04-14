@@ -12,6 +12,4 @@ class Comment extends Model {
 
     //Primary key is not the default id so set it.
     protected $primaryKey = 'comment_id';
-
->>>>>>> master
 }
