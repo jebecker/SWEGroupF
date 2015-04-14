@@ -18,7 +18,8 @@ class Log extends Model {
      */
     protected $fillable = ['user_id', 'ip_address', 'action'];
 
-
+    //Primary key is not the default id so set it.
+    protected $primaryKey = 'log_id';
 
 
 }
