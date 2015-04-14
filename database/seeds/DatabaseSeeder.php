@@ -7,6 +7,7 @@ use App\Course;
 use App\Section;
 use App\Application;
 use App\Comment;
+use App\Log;
 use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder {
@@ -34,8 +35,11 @@ class DatabaseSeeder extends Seeder {
 		$this->call('ApplicationTableSeeder');
 		$this->command->info('Application table seeded!');
 		
-		$this->call('CommentsTableSeeder');
-		$this->command->info('Comments table seeded!');
+		$this->call('CommentTableSeeder');
+		$this->command->info('Comment table seeded!');
+		
+		$this->call('LogTableSeeder');
+		$this->command->info('Log table seeded!');
 
 	}
 
@@ -178,7 +182,7 @@ class ApplicationTableSeeder extends Seeder {
 	}
 }
 
-class CommentsTableSeeder extends Seeder {
+class CommentTableSeeder extends Seeder {
 
 
 	public function run()
@@ -186,24 +190,61 @@ class CommentsTableSeeder extends Seeder {
 		//This line clears the current entries in the Comments table.
 		DB::table('comments')->delete();
 
-		Comments::create([  'instructor_id' => 'scottg',
+		Comment::create([  'instructor_id' => 'scottg',
 			'app_id' => '1',
 			'comment' => 'Excellent application! I feel this student would be a wonderful PLA'
 		]);
 			
-		Comments::create([  'instructor_id' => 'scottg',
+		Comment::create([  'instructor_id' => 'scottg',
 			'app_id' => '2',
 			'comment' => 'Terrible'
 		]);
 			
-		Comments::create([  'instructor_id' => 'guilliamsd',
+		Comment::create([  'instructor_id' => 'guilliamsd',
 			'app_id' => '1',
 			'comment' => 'I LIKE THIS GUY A LOT'
 		]);
 			
-		Comments::create([  'instructor_id' => 'guilliamsd',
+		Comment::create([  'instructor_id' => 'guilliamsd',
 			'app_id' => '2',
 			'comment' => 'I WOULD BE UNCOMFORTABLE WITH A TA NAMED UI BITCH'
 		]);
 	}
 }
+
+class LogTableSeeder extends Seeder {
+
+
+	public function run()
+	{
+		//This line clears the current entries in the Logs table.
+		DB::table('logs')->delete();
+
+		Log::create([  'user_id' => 'twn346',
+			'ip_address' => '123.45.67.89',
+			'action' => 'register'
+		]);
+		
+		Log::create([  'user_id' => 'twn346',
+			'ip_address' => '123.45.67.89',
+			'action' => 'logout'
+		]);
+		
+		Log::create([  'user_id' => 'guilliamsd',
+			'ip_address' => '1.1.1.1',
+			'action' => 'comment' //Instructor Action
+		]);
+		
+		Log::create([  'user_id' => 'rlc5m8',
+			'ip_address' => '98.76.54.32',
+			'action' => 'set window'  //Admin action
+		]);
+		
+		Log::create([  'user_id' => 'jebd4f',
+			'ip_address' => '9.99.9.99',
+			'action' => 'Submit'  //Student action
+		]);
+	}
+}
+		
+		
