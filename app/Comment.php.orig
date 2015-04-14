@@ -11,6 +11,9 @@ class Comment extends Model {
     protected $guarded = ['comment_id'];
 
     //Primary key is not the default id so set it.
+<<<<<<< HEAD
+    protected $primaryKey = 'course_id';
+=======
     protected $primaryKey = 'comment_id';
 
 >>>>>>> master
