@@ -6,6 +6,8 @@ use App\User;
 use App\Course;
 use App\Section;
 use App\Application;
+use App\Comment;
+use App\Log;
 use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder {
@@ -32,6 +34,12 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('ApplicationTableSeeder');
 		$this->command->info('Application table seeded!');
+		
+		$this->call('CommentTableSeeder');
+		$this->command->info('Comment table seeded!');
+		
+		$this->call('LogTableSeeder');
+		$this->command->info('Log table seeded!');
 
 	}
 
@@ -86,7 +94,7 @@ class CourseTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Course table.
 		DB::table('course')->delete();
 
 		Course::create([ 	'course_name' => 'cs1050',
@@ -111,7 +119,7 @@ class SectionTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Section table.
 		DB::table('section')->delete();
 
 		Section::create([	'course_id' => '1', //cs1050
@@ -135,7 +143,7 @@ class ApplicationTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Application table.
 		DB::table('application')->delete();
 
 		Application::create([	'applicant_id' => 'twn346',
@@ -174,7 +182,69 @@ class ApplicationTableSeeder extends Seeder {
 	}
 }
 
+class CommentTableSeeder extends Seeder {
 
 
+	public function run()
+	{
+		//This line clears the current entries in the Comments table.
+		DB::table('comments')->delete();
+
+		Comment::create([  'instructor_id' => 'scottg',
+			'app_id' => '1',
+			'comment' => 'Excellent application! I feel this student would be a wonderful PLA'
+		]);
+			
+		Comment::create([  'instructor_id' => 'scottg',
+			'app_id' => '2',
+			'comment' => 'Terrible'
+		]);
+			
+		Comment::create([  'instructor_id' => 'guilliamsd',
+			'app_id' => '1',
+			'comment' => 'I LIKE THIS GUY A LOT'
+		]);
+			
+		Comment::create([  'instructor_id' => 'guilliamsd',
+			'app_id' => '2',
+			'comment' => 'I WOULD BE UNCOMFORTABLE WITH A TA NAMED UI BITCH'
+		]);
+	}
+}
+
+class LogTableSeeder extends Seeder {
 
 
+	public function run()
+	{
+		//This line clears the current entries in the Logs table.
+		DB::table('logs')->delete();
+
+		Log::create([  'user_id' => 'twn346',
+			'ip_address' => '123.45.67.89',
+			'action' => 'register'
+		]);
+		
+		Log::create([  'user_id' => 'twn346',
+			'ip_address' => '123.45.67.89',
+			'action' => 'logout'
+		]);
+		
+		Log::create([  'user_id' => 'guilliamsd',
+			'ip_address' => '1.1.1.1',
+			'action' => 'comment' //Instructor Action
+		]);
+		
+		Log::create([  'user_id' => 'rlc5m8',
+			'ip_address' => '98.76.54.32',
+			'action' => 'set window'  //Admin action
+		]);
+		
+		Log::create([  'user_id' => 'jebd4f',
+			'ip_address' => '9.99.9.99',
+			'action' => 'Submit'  //Student action
+		]);
+	}
+}
+		
+		
