@@ -6,6 +6,7 @@ use App\User;
 use App\Course;
 use App\Section;
 use App\Application;
+use App\Comment;
 use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder {
@@ -32,6 +33,9 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('ApplicationTableSeeder');
 		$this->command->info('Application table seeded!');
+		
+		$this->call('CommentsTableSeeder');
+		$this->command->info('Comments table seeded!');
 
 	}
 
@@ -86,7 +90,7 @@ class CourseTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Course table.
 		DB::table('course')->delete();
 
 		Course::create([ 	'course_name' => 'cs1050',
@@ -111,7 +115,7 @@ class SectionTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Section table.
 		DB::table('section')->delete();
 
 		Section::create([	'course_id' => '1', //cs1050
@@ -135,7 +139,7 @@ class ApplicationTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//This line clears the current entries in the User table.
+		//This line clears the current entries in the Application table.
 		DB::table('application')->delete();
 
 		Application::create([	'applicant_id' => 'twn346',
@@ -174,7 +178,32 @@ class ApplicationTableSeeder extends Seeder {
 	}
 }
 
+class CommentsTableSeeder extends Seeder {
 
 
+	public function run()
+	{
+		//This line clears the current entries in the Comments table.
+		DB::table('comments')->delete();
 
-
+		Comments::create([  'instructor_id' => 'scottg',
+			'app_id' => '1',
+			'comment' => 'Excellent application! I feel this student would be a wonderful PLA'
+		]);
+			
+		Comments::create([  'instructor_id' => 'scottg',
+			'app_id' => '2',
+			'comment' => 'Terrible'
+		]);
+			
+		Comments::create([  'instructor_id' => 'guilliamsd',
+			'app_id' => '1',
+			'comment' => 'I LIKE THIS GUY A LOT'
+		]);
+			
+		Comments::create([  'instructor_id' => 'guilliamsd',
+			'app_id' => '2',
+			'comment' => 'I WOULD BE UNCOMFORTABLE WITH A TA NAMED UI BITCH'
+		]);
+	}
+}
