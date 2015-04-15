@@ -41,7 +41,7 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -65,7 +65,10 @@
                     <a href="/">Login</a>
                 </li>
                 <li>
-                    <a href="">Admin</a>
+                    <a href="form">Application</a>
+                </li>
+                <li>
+                    <a href="admin">Admin</a>
                 </li>
             </ul>
         </div>
@@ -75,7 +78,7 @@
 </nav>
 
 <!-- Header -->
-<header style="height:100vh">
+<header style="height:100vh; background-color: #222">
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in"">Welcome To The TA/PLA Application Form!</div>
@@ -105,7 +108,7 @@
     </div>
 
     <div class="container" style="max-width:1000px;margin 0 auto;">
-        <form class="form-inline">
+        <form class="form-inline" method="POST">
             <div class="container" style="width:50%;">
                 <div class="radio pull-left">
                     <label>

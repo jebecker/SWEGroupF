@@ -11,7 +11,7 @@
 
     <title>TA/PLA Application Form</title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS-->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- link to incorporate css with framework
@@ -41,7 +41,7 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -65,7 +65,10 @@
                     <a href="/">Login</a>
                 </li>
                 <li>
-                    <a href="">Admin</a>
+                    <a href="form">Application</a>
+                </li>
+                <li>
+                    <a href="admin">Admin</a>
                 </li>
             </ul>
         </div>
@@ -73,15 +76,6 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
-<!-- Header -->
-<header style="height:45vh">
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in"">Welcome To The Admin Page</div>
-        </div>
-    </div>
-</header>
 
 <!-- Admin Section -->
 <section id="admin">
@@ -101,7 +95,7 @@
     </div>
 
     <div class="container" style="max-width:1000px;margin 0 auto;">
-        <form class="form-inline">
+        <form class="form-inline" method="POST">
            <div class="container text-center" style="width:97%;"><!-- text inputs for admin to change the start and end time fram for the application -->
                 <div class="form-group pull-left">
                     <label for="startDateAppTimeFrame">Enter Application Start Date</label>
@@ -165,7 +159,7 @@
 <script src="/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+<script> src="/js/bootstrap.min.js"></script>
 
 <!-- script tag to integrate js with framework
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
