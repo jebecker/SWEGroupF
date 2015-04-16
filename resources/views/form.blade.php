@@ -121,7 +121,7 @@
                 </div>
                 <div class="radio pull-right">
                     <label>
-                        <input type="radio" name="schoolStandingOption" id="undergraduteStudnet" value="undergrad">
+                        <input type="radio" name="schoolStandingOption" id="undergraduteStudent" value="undergrad">
                         PLA(Undergradute Student)
                     </label>
                 </div>
