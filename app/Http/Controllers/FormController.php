@@ -30,5 +30,8 @@ class FormController extends Controller {
 	{
 		return view('form');
 	}
-
+	public function submit()
+	{
+		return view('form')->withErrors('Submission Successful');
+	}
 }

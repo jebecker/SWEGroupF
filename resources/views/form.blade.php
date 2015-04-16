@@ -77,18 +77,16 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
+    <!-- Just a little bar at the bottom to tell me if submission succeeded or not -->
+    @if($errors->any())
+    <header>
+        <div class="container">
+            <h4>{{$errors->first()}}</h4>
+        </div>
+    </header>
+    @endif
     <!-- /.container-fluid -->
 </nav>
-
-<!-- Header -->
-<header style="height:100vh; background-color: #222">
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in"">Welcome To The TA/PLA Application Form!</div>
-            <a href="#apply" class="page-scroll btn btn-xl">Apply Now!</a>
-        </div>
-    </div>
-</header>
 
 <!-- Application Section -->
 <section id="apply">
@@ -111,7 +109,7 @@
     </div>
 
     <div class="container" style="max-width:1000px;margin 0 auto;">
-        <form class="form-inline" method="POST">
+        {!!  Form::open(array('action'=>'FormController@submit', 'method' => 'post', 'class' => 'form-inline')) !!}
             <div class="container" style="width:50%;">
                 <div class="radio pull-left">
                     <label>
@@ -319,7 +317,7 @@
                     <button type="submit" class="btn btn-xl">Submit Changes</button>
                 </div>
             </div>
-        </form>
+        {!!  Form::close()  !!}
 </section>
 
 <!-- jQuery -->

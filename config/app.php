@@ -135,7 +135,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-
+		'Illuminate\Html\HtmlServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -159,7 +159,8 @@ return [
 	*/
 
 	'aliases' => [
-
+		'Html'      => 'Illuminate\Html\HtmlFacade',
+		'Form'      => 'Illuminate\Html\FormFacade',
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
