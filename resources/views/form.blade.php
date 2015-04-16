@@ -219,15 +219,28 @@
             </div>
             <div class="container" style="width:inherit;">
                 <!--radio button and text input for graduate student applicant to put in level and advisor's name -->
+               <div class="form-gorup" style="width: 100%;">
+                   <label class="pull-left" for="applicantHaveTaught">Course(s) you have previously taught: </label>
+                   <input type="text" class="pull-right form-control" style="width: 60%;" id="applicantHaveTaught" placeholder="e.g. CS1050">
+               </div>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <div class="container" style="width:inherit;">
                 <div class="form-group" style="width:100%;">
-                    <label class="pull-left" for="applicantTeaching">Courses you are currently teaching: </label>
+                    <label class="pull-left" for="applicantTeaching">Course(s) you are currently teaching: </label>
                     <input type="text" class="pull-right form-control" style="width:60%" id="applicantTeaching"
                            placeholder="e.g. CS1050">
                 </div>
             </div>
+
             <div>
                 <br>
             </div>
+
             <div class="container" style="width:inherit;">
                 <!--radio button and text input for graduate student applicant to put in level and advisor's name -->
                 <div class="form-group" style="width:100%;">

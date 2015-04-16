@@ -35,6 +35,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- custom css for dataTables -->
+    <script src="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css"></script>
 
 </head>
 
@@ -94,24 +97,18 @@
 
    </div>
 
-
-
-    <!--applicant table -->
-
-
      <div class="container" style="width:1400px;margin 0 auto;">
          
         <div>
             <br>
         </div>
 
-
         <form class="form-horizontal"> <!-- instructor form to select an applicant, rate them, and add comments if necessary-->
-            <div class="container" style="max-height: 300px; width: 100%; overflow: auto;">
-                <table class="table table-bordered" id="applicationTable">
+            <div class="container" style="max-height: 300px; min-width: 1400px; overflow: auto;">
+                <table class="table table-bordered display" id="applicationTable"> <!--applicant table -->
                     <thead>
                     <tr>
-                        <th></th>
+                        <th>Rank</th>
                         <th>Name</th>
                         <th>Student ID</th>
                         <th>GPA</th>
@@ -129,7 +126,14 @@
                     <tbody>
                     <tr>
                         <td id="applicantCheckBox">
-                            <input type="checkbox" id="radioSelectApplicant">
+                            <select id="preferenceRank">
+                                <option value="">N/A</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
                         </td>
                         <td id="name">John Doe</td>
                         <td id="ID">18052537</td>
@@ -146,7 +150,14 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <input type="checkbox" id="radioSelectApplicant">
+                            <select id="preferenceRank">
+                                <option value="">N/A</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
                         </td>
                         <td id="name">John Doe</td>
                         <td id="ID">18052537</td>
@@ -163,7 +174,14 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <input type="checkbox" id="radioSelectApplicant">
+                            <select id="preferenceRank">
+                                <option value="">N/A</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
                         </td>
                         <td id="name">John Doe</td>
                         <td id="ID">18052537</td>
@@ -180,7 +198,14 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <input type="checkbox" id="radioSelectApplicant">
+                            <select id="preferenceRank">
+                                <option value="">N/A</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
                         </td>
                         <td id="name">John Doe</td>
                         <td id="ID">18052537</td>
@@ -204,26 +229,10 @@
                 <br>
             </div>
 
-            <div class = "container text-center col-md-offset-2 col-md-8">
-                <h4>Preference rank</h4>
-            </div>
-                
-            <div class = "container col-md-offset-4 col-md-4">
-                 <div class = "form-group form-group-md">
-                     <select class="form-control input-lg" id="preferenceRank">
-                         <option value="" selected>Rank</option>
-                          <option value=1>1</option>
-                          <option value=2>2</option>
-                          <option value=3>3</option>
-                          <option value=4>4</option>
-                          <option value=5>5</option>
-                    </select>
-                </div>
-            </div>
 
         <div class = "container text-center col-md-offset-2 col-md-8">
 
-            <h4>Comment on this Applicant</h4>
+            <h4>Comment On Applicant</h4>
 
             <textarea class="form-control" id="applicantComment" rows="3"></textarea>
 
@@ -260,6 +269,30 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/agency.js"></script>
+
+<!-- dataTables js library (requires jquery) -->
+<script src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+<!-- custom js to use data tables -->
+<script>
+
+    $(document).ready(function()
+    {
+        var table = $('#applicationTable').DataTable();
+
+        $('#applicationTable tbody').on('click', 'tr', function ()
+        {
+            $(this).toggleClass('selected');
+        });
+
+        $('#button').click( function () {
+            alert( table.rows('.selected').data().length +' row(s) selected' );
+        } );
+    });
+
+
+</script>
 
 </body>
 
