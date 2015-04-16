@@ -35,6 +35,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body id="page-top" class="index">
@@ -96,101 +97,9 @@
 
 
     <!--applicant table -->
-    <div class="container" style="height: 300px; width: 87%; overflow: auto;">
-        <table class="table table-bordered" id="applicationTable">
-           <thead>
-            <tr>
-                <th>Name</th>
-                <th>Student ID</th>
-                <th>GPA</th>
-                <th>Graduate/Undergrad Student</th>
-                <th>Program and Level</th>
-                <th>Graduate Advisor</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>Anticipated Graduation Date</th>
-                <th>Courses They Teach</th>
-                <th>Courses They Would Like To Teach</th>
-                <th>SPEAK/OPT Score</th>
-            </tr>
-            </thead>
-        <tbody>
-            <tr>
-                <td id="name">John Doe</td>
-                <td id="ID">18052537</td>
-                <td id="GPA">3.63</td>
-                <td id="grad_undergrad">Undergradute</td>
-                <td id="programLevel">BS CS jr</td>
-                <td id="gradAvisor">Adrianna Wheeler</td>
-                <td id="phone">3141234567</td>
-                <td id="email">jebd4f@mail.missouri.edu</td>
-                <td id="gradDate">5/16/16</td>
-                <td id="taughtCourses">CS 1050, CS 2050</td>
-                <td id="wantedCourses">IT 4500, CS 3330</td>
-                <td id="speakScore">9000</td>
-            </tr>
-            <tr>
-                <td id="name">John Doe</td>
-                <td id="ID">18052537</td>
-                <td id="GPA">3.63</td>
-                <td id="grad_undergrad">Undergradute</td>
-                <td id="programLevel">BS CS jr</td>
-                <td id="gradAvisor">Adrianna Wheeler</td>
-                <td id="phone">3141234567</td>
-                <td id="email">jebd4f@mail.missouri.edu</td>
-                <td id="gradDate">5/16/16</td>
-                <td id="taughtCourses">CS 1050, CS 2050</td>
-                <td id="wantedCourses">IT 4500, CS 3330</td>
-                <td id="speakScore">9000</td>
-            </tr>
-            <tr>
-                <td id="name">John Doe</td>
-                <td id="ID">18052537</td>
-                <td id="GPA">3.63</td>
-                <td id="grad_undergrad">Undergradute</td>
-                <td id="programLevel">BS CS jr</td>
-                <td id="gradAvisor">Adrianna Wheeler</td>
-                <td id="phone">3141234567</td>
-                <td id="email">jebd4f@mail.missouri.edu</td>
-                <td id="gradDate">5/16/16</td>
-                <td id="taughtCourses">CS 1050, CS 2050</td>
-                <td id="wantedCourses">IT 4500, CS 3330</td>
-                <td id="speakScore">9000</td>
-            </tr>
-            <tr>
-                <td id="name">John Doe</td>
-                <td id="ID">18052537</td>
-                <td id="GPA">3.63</td>
-                <td id="grad_undergrad">Undergradute</td>
-                <td id="programLevel">BS CS jr</td>
-                <td id="gradAvisor">Adrianna Wheeler</td>
-                <td id="phone">3141234567</td>
-                <td id="email">jebd4f@mail.missouri.edu</td>
-                <td id="gradDate">5/16/16</td>
-                <td id="taughtCourses">CS 1050, CS 2050</td>
-                <td id="wantedCourses">IT 4500, CS 3330</td>
-                <td id="speakScore">9000</td>
-            </tr>
-            <tr>
-                <td id="name">John Doe</td>
-                <td id="ID">18052537</td>
-                <td id="GPA">3.63</td>
-                <td id="grad_undergrad">Undergradute</td>
-                <td id="programLevel">BS CS jr</td>
-                <td id="gradAvisor">Adrianna Wheeler</td>
-                <td id="phone">3141234567</td>
-                <td id="email">jebd4f@mail.missouri.edu</td>
-                <td id="gradDate">5/16/16</td>
-                <td id="taughtCourses">CS 1050, CS 2050</td>
-                <td id="wantedCourses">IT 4500, CS 3330</td>
-                <td id="speakScore">9000</td>
-            </tr>
-           </tbody>
-        </table>
 
-    </div>
 
-     <div class="container" style="max-width:1000px;margin 0 auto;">
+     <div class="container" style="width:1400px;margin 0 auto;">
          
         <div>
             <br>
@@ -198,24 +107,106 @@
 
 
         <form class="form-horizontal"> <!-- instructor form to select an applicant, rate them, and add comments if necessary-->
-            <div class = "container text-center col-md-offset-4 col-md-4">
+            <div class="container" style="max-height: 300px; width: 100%; overflow: auto;">
+                <table class="table table-bordered" id="applicationTable">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>GPA</th>
+                        <th>Graduate/Undergrad Student</th>
+                        <th>Program and Level</th>
+                        <th>Graduate Advisor</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Anticipated Graduation Date</th>
+                        <th>Courses They Teach</th>
+                        <th>Courses They Would Like To Teach</th>
+                        <th>SPEAK/OPT Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <input type="checkbox" id="radioSelectApplicant">
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="taughtCourses">CS 1050, CS 2050</td>
+                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <input type="checkbox" id="radioSelectApplicant">
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="taughtCourses">CS 1050, CS 2050</td>
+                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <input type="checkbox" id="radioSelectApplicant">
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="taughtCourses">CS 1050, CS 2050</td>
+                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <input type="checkbox" id="radioSelectApplicant">
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="taughtCourses">CS 1050, CS 2050</td>
+                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    </tbody>
+                </table>
 
-                    <h4>Select an Applicant</h4>
+            </div>
 
-                <div class = "form-group form-group-md">
-                     <select class="form-control input-lg" id="applicantNameSelected">
-                        <option value="" selected>Applicant</option>
-                        <option value="Joe">Joe</option>
-                        <option value="Jane">Jane</option>
-                        <option value="Bob">Bob</option>
-                        <option value="Rick">Rick</option>
-                        <option value="Bud">Bud</option>
-                    </select>
-                </div>
-             </div>
-                 <div class = "container text-center col-md-offset-2 col-md-8">
-                    <h4>Preference rank</h4>
-                </div>
+            <div>
+                <br>
+            </div>
+
+            <div class = "container text-center col-md-offset-2 col-md-8">
+                <h4>Preference rank</h4>
+            </div>
                 
             <div class = "container col-md-offset-4 col-md-4">
                  <div class = "form-group form-group-md">
