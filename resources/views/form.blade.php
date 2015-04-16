@@ -70,6 +70,9 @@
                 <li>
                     <a href="admin">Admin</a>
                 </li>
+                <li>
+                    <a href="instructor">Instructor</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -98,7 +101,7 @@
                 <h4> GRADUATE TEACHING ASSISTANT APPLICATION</h4>
 
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <u>Deadline:</u> Put Date Here
+                    <u>Deadline:</u> <label id="deadlineDateLabel">Put Date Here </label>
                 </div>
             </div>
         </div>
@@ -307,13 +310,15 @@
                     </li>
                 </div>
             </div>
+
             <br>
             <br>
+
             <div class="container text-center" style="width:inherit;">
-            <div class="intro-text">
-                <a href="/submit" class="page-scroll btn btn-xl">Submit Application</a>
-            </div>
+                <div class="intro-text">
+                    <button type="submit" class="btn btn-xl">Submit Changes</button>
                 </div>
+            </div>
         </form>
 </section>
 

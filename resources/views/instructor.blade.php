@@ -40,7 +40,7 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -63,6 +63,15 @@
                 <li>
                     <a href="/">Login</a>
                 </li>
+                <li>
+                    <a href="form">Application</a>
+                </li>
+                <li>
+                    <a href="admin">Admin</a>
+                </li>
+                <li>
+                    <a href="instructor">Instructor</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -70,15 +79,7 @@
     <!-- /.container-fluid -->
 </nav>
 
-<!-- Header -->
-<header style="height:100vh">
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Instructor Page</div>
-        <a href="#instructor" class="page-scroll btn btn-xl">Get Started</a>
-    </div>
-    </div>
-</header>
+
 
 <section id = "instructor">
     <div class="container">
@@ -86,65 +87,80 @@
         <div class="col-md-8 col-md-offset-2 text-center">
             <h2>Instructor Page</h2>
         </div>
-    </div>
-
     <div>
         <br>
     </div>
 
-     <div class="container" style="max-width:1000px;margin 0 auto;">
-        <form class="form-horizontal">
-             
-        
+   </div>
 
-        <div class = "container col-md-offset-2 col-md-8">
-            <div class = "container col-md-offset-4 col-md">
-                <h4> Select a student</h4>
-            </div>
-                 <div class = "form-group form-group-md">
-                     <select class="form-control input-lg " placeholder = "Applicants">
-                          <option>Joe</option>
-                          <option>Jane</option>
-                          <option>Bob</option>
-                          <option>Rick</option>
-                          <option>Bud</option>
+     <div class="container" style="max-width:1000px;margin 0 auto;">
+
+         <!--appicant table
+         <div class="container table-responsive">
+             <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th></th>
+                    </tr>
+             </table>
+
+         </div>
+    -->
+        <div>
+            <br>
+        </div>
+
+
+        <form class="form-horizontal"> <!-- instructor form to select an applicant, rate them, and add comments if necessary-->
+            <div class = "container text-center col-md-offset-4 col-md-4">
+
+                    <h4>Select an Applicant</h4>
+
+                <div class = "form-group form-group-md">
+                     <select class="form-control input-lg" id="applicantSelected">
+                        <option value="" selected>Applicant</option>
+                        <option value="Joe">Joe</option>
+                        <option value="Jane">Jane</option>
+                        <option value="Bob">Bob</option>
+                        <option value="Rick">Rick</option>
+                        <option value="Bud">Bud</option>
                     </select>
                 </div>
-        </div>
-        </form>
-         <form class="form-inline">
-                 <div class = "container col-md-offset-2 col-md-8">
-                    <h4> Preference rank? </h4>
+             </div>
+                 <div class = "container text-center col-md-offset-2 col-md-8">
+                    <h4>Preference rank</h4>
                 </div>
                 
-                 <div class = "container col-md-offset-2 col-md-1">
+            <div class = "container col-md-offset-4 col-md-4">
                  <div class = "form-group form-group-md">
-                     <select class="form-control input-lg " placeholder = "Applicants">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                     <select class="form-control input-lg" id="preferenceRank">
+                         <option value="" selected>Rank</option>
+                          <option value=1>1</option>
+                          <option value=2>2</option>
+                          <option value=3>3</option>
+                          <option value=4>4</option>
+                          <option value=5>5</option>
                     </select>
                 </div>
             </div>
 
-        <div class = "container col-md-offset-2 col-md-8">
-            <br>
-            <h4> Comment about this student </h4>
-            <textarea class="form-control" rows="3"></textarea>
-            
-            <div class="container text-center" style="width:inherit;">
-                <div class="intro-text">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
+        <div class = "container text-center col-md-offset-2 col-md-8">
+
+            <h4>Comment on this Applicant</h4>
+
+            <textarea class="form-control" id="applicantComment" rows="3"></textarea>
+
+            <div>
+                <br>
             </div>
 
+            <div class="container text-center col-md-offset-2 col-md-8" style="width:inherit;">
+                <div class="intro-text">
+                    <button type="submit" class="btn btn-xl" id="instructorSubmitBTN">Submit</button>
+                </div>
+            </div>
         </div>
-
-       
-        </form>
-    </div>
+    </form>
+ </div>
 </section>
 
 

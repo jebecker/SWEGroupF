@@ -70,6 +70,9 @@
                 <li>
                     <a href="admin">Admin</a>
                 </li>
+                <li>
+                    <a href="instructor">Instructor</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -146,7 +149,7 @@
 
             <div class="container text-center" style="width:inherit;">
                 <div class="intro-text">
-                    <button type="submit" class="btn btn-default">Submit Changes</button>
+                    <button type="submit" class="btn btn-xl" id="adminSubmitBTN">Submit Changes</button>
                 </div>
             </div>
         </form>
