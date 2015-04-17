@@ -36,6 +36,11 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- custom css for dataTables -->
+    <script src="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css"></script>
+
+
 </head>
 
 <body id="page-top" class="index">
@@ -175,6 +180,11 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/agency.js"></script>
+
+<!-- dataTables js library (requires jquery) -->
+<script src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
 
 </body>
 

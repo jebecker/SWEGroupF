@@ -104,7 +104,30 @@
         </div>
 
         <form class="form-horizontal"> <!-- instructor form to select an applicant, rate them, and add comments if necessary-->
-            <div class="container" style="max-height: 300px; min-width: 1400px; overflow: auto;">
+            <!-- dropdown list for instructor to pick the course they want to see the applicants of -->
+            <div class="container col-md-2">
+                <label class="pull-left" for="pickCourseDropDown">Select a Course</label>
+                <select class="form-control" id="pickCourseDropDown" onchange="changeCSS();">
+                    <option value="">Select a Course</option>
+                    <option value="CS 1050">CS 1050</option>
+                    <option value="CS 2050">CS 2050</option>
+                    <option value="CS 4050">CS 4050</option>
+                    <option value="CS 4320">CS 4320</option>
+                </select>
+
+                <div>
+                    <br>
+                </div>
+
+            </div>
+
+
+
+            <div>
+                <br>
+            </div>
+
+            <div class="container" id="tableDiv" hidden style="max-height: 300px; min-width: 1400px; overflow: auto;">
                 <table class="table table-bordered display" id="applicationTable"> <!--applicant table -->
                     <thead>
                     <tr>
@@ -126,7 +149,7 @@
                     <tbody>
                     <tr>
                         <td id="applicantCheckBox">
-                            <select id="preferenceRank">
+                            <select class="form-control" id="preferenceRank">
                                 <option value="">N/A</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -150,7 +173,7 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <select id="preferenceRank">
+                            <select class="form-control" id="preferenceRank">
                                 <option value="">N/A</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -174,7 +197,7 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <select id="preferenceRank">
+                            <select class="form-control" id="preferenceRank">
                                 <option value="">N/A</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -198,7 +221,7 @@
                     </tr>
                     <tr>
                         <td id="applicantCheckBox">
-                            <select id="preferenceRank">
+                            <select class="form-control" id="preferenceRank">
                                 <option value="">N/A</option>
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -230,7 +253,7 @@
             </div>
 
 
-        <div class = "container text-center col-md-offset-2 col-md-8">
+        <div class = "container text-center col-md-offset-2 col-md-8" id="commentDiv" hidden>
 
             <h4>Comment On Applicant</h4>
 
@@ -279,6 +302,7 @@
 
     $(document).ready(function()
     {
+
         var table = $('#applicationTable').DataTable();
 
         $('#applicationTable tbody').on('click', 'tr', function ()
@@ -290,6 +314,14 @@
             alert( table.rows('.active').data().length +' row(s) selected' );
         } );
     });
+
+    function changeCSS(){
+        var elem = document.getElementById("tableDiv");
+        elem.style.display = "block";
+
+        var elem2 = document.getElementById("commentDiv");
+        elem2.style.display = "block";
+    }
 
 
 </script>
