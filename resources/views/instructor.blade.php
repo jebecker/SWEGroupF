@@ -283,11 +283,11 @@
 
         $('#applicationTable tbody').on('click', 'tr', function ()
         {
-            $(this).toggleClass('selected');
+            $(this).toggleClass('active');
         });
 
         $('#button').click( function () {
-            alert( table.rows('.selected').data().length +' row(s) selected' );
+            alert( table.rows('.active').data().length +' row(s) selected' );
         } );
     });
 
