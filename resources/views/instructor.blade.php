@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Instructor Page</title>
+    <title>TA/PLA Application Form</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -127,8 +127,8 @@
                 <br>
             </div>
 
-            <div class="container" id="tableDiv" hidden style="max-height: 300px; min-width: 1400px; overflow: auto;">
-                <table class="table table-bordered display" id="applicationTable"> <!--applicant table -->
+            <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;">
+                <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
                     <thead>
                     <tr>
                         <th>Rank</th>
@@ -142,6 +142,7 @@
                         <th>Email</th>
                         <th>Anticipated Graduation Date</th>
                         <th>Courses They Teach</th>
+                        <th>Courses They Have Taught</th>
                         <th>Courses They Would Like To Teach</th>
                         <th>SPEAK/OPT Score</th>
                     </tr>
@@ -167,8 +168,9 @@
                         <td id="phone">3141234567</td>
                         <td id="email">jebd4f@mail.missouri.edu</td>
                         <td id="gradDate">5/16/16</td>
-                        <td id="taughtCourses">CS 1050, CS 2050</td>
-                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
                         <td id="speakScore">9000</td>
                     </tr>
                     <tr>
@@ -191,8 +193,9 @@
                         <td id="phone">3141234567</td>
                         <td id="email">jebd4f@mail.missouri.edu</td>
                         <td id="gradDate">5/16/16</td>
-                        <td id="taughtCourses">CS 1050, CS 2050</td>
-                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
                         <td id="speakScore">9000</td>
                     </tr>
                     <tr>
@@ -215,8 +218,9 @@
                         <td id="phone">3141234567</td>
                         <td id="email">jebd4f@mail.missouri.edu</td>
                         <td id="gradDate">5/16/16</td>
-                        <td id="taughtCourses">CS 1050, CS 2050</td>
-                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
                         <td id="speakScore">9000</td>
                     </tr>
                     <tr>
@@ -239,8 +243,9 @@
                         <td id="phone">3141234567</td>
                         <td id="email">jebd4f@mail.missouri.edu</td>
                         <td id="gradDate">5/16/16</td>
-                        <td id="taughtCourses">CS 1050, CS 2050</td>
-                        <td id="wantedCourses">IT 4500, CS 3330</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
                         <td id="speakScore">9000</td>
                     </tr>
                     </tbody>

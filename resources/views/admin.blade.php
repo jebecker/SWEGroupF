@@ -57,7 +57,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">TA/PLA Application</a>
+            <a class="navbar-brand page-scroll" href="#page-top">Admin Page</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

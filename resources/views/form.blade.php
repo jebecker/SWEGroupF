@@ -82,13 +82,18 @@
 
 <!-- Header -->
 <header style="height:100vh; background-color: #222">
+
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in"">Welcome To The TA/PLA Application Form!</div>
             <a href="#apply" class="page-scroll btn btn-xl">Apply Now!</a>
         </div>
     </div>
+
+
 </header>
+
+
 
 <!-- Application Section -->
 <section id="apply">
@@ -273,7 +278,7 @@
                            id="applicantDesired" placeholder="">
                 </div>
                 <div class="pull-right form-group" style="width:40%;">
-                    <label class="pull-left" for="applicantDesired">Semester of last tast:</label>
+                    <label class="pull-left" for="applicantDesired">Semester of last test:</label>
                     <input style="width:50%;" type="text" class="pull-right form-control" style="width:50%"
                            id="applicantDesired" placeholder="">
                 </div>
