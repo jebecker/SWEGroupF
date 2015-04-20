@@ -70,6 +70,175 @@
                 <br>
             </div>
 
+
+            <div>
+                <br>
+            </div>
+
+            
+
+        <form class="form-horizontal"> <!-- Admin form for an administrator to select a class and assign TA/PLAs to that class-->
+            <!-- dropdown list for admin to pick the course they want to assign applicants to -->
+            <div class="container" style="width: inherit;">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h4>Assign Applicant to a Course</h4>
+                </div>
+            </div>
+            <div class="container col-md-2">
+                <label class="pull-left" for="pickCourseDropDown">Select a Course</label>
+                <select class="form-control" id="pickCourseDropDown" onchange="changeCSS();">
+                    <option value="">Select a Course</option>
+                    <option value="CS 1050">CS 1050</option>
+                    <option value="CS 2050">CS 2050</option>
+                    <option value="CS 4050">CS 4050</option>
+                    <option value="CS 4320">CS 4320</option>
+                </select>
+
+                <div>
+                    <br>
+                </div>
+
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+             <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;"><!-- NOTE: Add "hidden" before style to hide table. -->
+                <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
+                    <thead>
+                    <tr>
+                        <th>Add to Course</th>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>GPA</th>
+                        <th>Graduate/Undergrad Student</th>
+                        <th>Program and Level</th>
+                        <th>Graduate Advisor</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Anticipated Graduation Date</th>
+                        <th>Courses They Teach</th>
+                        <th>Courses They Have Taught</th>
+                        <th>Courses They Would Like To Teach</th>
+                        <th>SPEAK/OPT Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+
             <div class="container text-center" style="width:inherit;">
                 <div class="intro-text">
                     <button type="submit" class="btn btn-xl" id="adminSubmitBTN">Submit Changes</button>
@@ -79,5 +248,6 @@
     </div>
 
 </section>
+
 
 @stop
