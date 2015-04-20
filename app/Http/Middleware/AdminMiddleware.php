@@ -33,19 +33,31 @@ class AdminMiddleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->guest() == false)
+
+		//Handle preventing guest from viewing anything but login.
+		if ($this->auth->guest())
 		{
-			$type = $this->auth->user()->user_type;
-		} else {
-			$type = 'guest';
+			if ($request->ajax())
+			{
+				return response ('Unauthorized.', 401);
+			}
+			else
+			{
+				return redirect()->guest('auth/login');
+			}
 		}
 
+		//if the user is logged in find out what kind of user.
+		$type = $this->auth->user()->user_type;
+
+		//If they are an admin let them proceed.
 		if ($type == 'admin')
 		{
 			return $next($request);
 		}
-		//return redirect()->back()->with('message', 'Access Denied');
-		return $next($request);
+
+		//else send them back to where they came from with a message.
+		return redirect()->back()->with('message', 'Access Denied');
 
 	}
 

@@ -33,20 +33,29 @@ class InstructorMiddleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->guest() == false)
+		//Handle preventing guest from viewing anything but login.
+		if ($this->auth->guest())
 		{
-			$type = $this->auth->user()->user_type;
-		} else {
-			$type = 'guest';
+			if ($request->ajax())
+			{
+				return response ('Unauthorized.', 401);
+			}
+			else
+			{
+				return redirect()->guest('auth/login');
+			}
 		}
 
+		//if the user is logged in find out what kind of user and pas them through if they have access.
+		$type = $this->auth->user()->user_type;
 
 		if ($type == 'instructor' || $type == 'admin')
 		{
 			return $next($request);
 		}
-		//return redirect()->back()->with('message', 'Access Denied');
-		return $next($request);
+
+		//Else send them back to where they came from.
+		return redirect()->back()->with('message', 'Access Denied');
 	}
 
 }

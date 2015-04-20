@@ -33,19 +33,28 @@ class StudentMiddleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->guest() == false)
+		//Handle preventing guest from viewing anything but login.
+		if ($this->auth->guest())
 		{
-			$type = $this->auth->user()->user_type;
-		} else {
-			$type = 'guest';
+			if ($request->ajax())
+			{
+				return response ('Unauthorized.', 401);
+			}
+			else
+			{
+				return redirect()->guest('auth/login');
+			}
 		}
+
+		//if the user is logged in find out what kind of user.
+		$type = $this->auth->user()->user_type;
 
 		if ($type == 'student' || $type == 'admin' || $type == 'instructor')
 		{
 			return $next($request);
 		}
-		//return redirect()->back()->with('message', 'Access Denied');
-		return $next($request);;
+
+		return redirect()->back()->with('message', 'Access Denied');
 	}
 
 }
