@@ -44,6 +44,9 @@ class Authenticate {
 			}
 		}
 		return $next($request);
+
+		// Following line can't work until form page has a link to logout.
+		//return redirect('form');
 	}
 
 }
