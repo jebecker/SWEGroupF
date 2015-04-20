@@ -33,13 +33,19 @@ class StudentMiddleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		$type = $this->auth->user()->user_type;
+		if ($this->auth->guest() == false)
+		{
+			$type = $this->auth->user()->user_type;
+		} else {
+			$type = 'guest';
+		}
 
 		if ($type == 'student' || $type == 'admin' || $type == 'instructor')
 		{
 			return $next($request);
 		}
-		return redirect()->back()->with('message', 'Access Denied');
+		//return redirect()->back()->with('message', 'Access Denied');
+		return $next($request);;
 	}
 
 }

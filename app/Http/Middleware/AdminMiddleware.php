@@ -33,13 +33,19 @@ class AdminMiddleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		$type = $this->auth->user()->user_type;
+		if ($this->auth->guest() == false)
+		{
+			$type = $this->auth->user()->user_type;
+		} else {
+			$type = 'guest';
+		}
 
 		if ($type == 'admin')
 		{
 			return $next($request);
 		}
-		return redirect()->back()->with('message', 'Access Denied');
+		//return redirect()->back()->with('message', 'Access Denied');
+		return $next($request);
 
 	}
 
