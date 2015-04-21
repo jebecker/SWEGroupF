@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,6 +93,10 @@
 @extends('app')
 @section('content')
 >>>>>>> Stashed changes
+=======
+@extends('app')
+@section('content')
+>>>>>>> Stashed changes
 
 <!-- Application Section -->
     <div class="container">
@@ -181,7 +186,11 @@
                         <label style="line-height:30px;padding-left:20px" >
                             MS
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                             <input type="radio" name="gradStudentProgram" id="graduateProgramMS" value="MS">
+=======
+                            <input type="radio" name="gradStudentProgram" id="graduateProgramMS" value="Masters">
+>>>>>>> Stashed changes
 =======
                             <input type="radio" name="gradStudentProgram" id="graduateProgramMS" value="Masters">
 >>>>>>> Stashed changes
@@ -191,7 +200,11 @@
                             <input class="col-md-offset-2" type="radio" name="gradStudentProgram"
                                    id="graduateProgramPHD"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                                    value="Phd">
+=======
+                                   value="PHD">
+>>>>>>> Stashed changes
 =======
                                    value="PHD">
 >>>>>>> Stashed changes
@@ -277,7 +290,11 @@
                     <label style="line-height:30px;"  class="pull-left" for="applicantDesired">Other places you work: </label>
                     <input style="width:50%;" type="text" class="pull-right form-control" style="width:60%"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                            name="otherWork" value="" placeholder="">
+=======
+                           name="otherWork">
+>>>>>>> Stashed changes
 =======
                            name="otherWork">
 >>>>>>> Stashed changes
@@ -292,7 +309,11 @@
                     <label style="line-height:30px;" class="pull-left" for="applicantDesired">SPEAK/OPT score, if applicable:</label>
                     <input style="width:40%" type="number" class="pull-right form-control" style="width:50%"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                            name="speakOPT" placeholder="">
+=======
+                           name="speakOPT">
+>>>>>>> Stashed changes
 =======
                            name="speakOPT">
 >>>>>>> Stashed changes
@@ -301,7 +322,11 @@
                     <label  style="line-height:30px;" class="pull-left" for="applicantDesired">Semester of last tast:</label>
                     <input style="width:50%;" type="text" class="pull-right form-control" style="width:50%"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                            name="lastSpeak" placeholder="">
+=======
+                           name="lastSpeak">
+>>>>>>> Stashed changes
 =======
                            name="lastSpeak">
 >>>>>>> Stashed changes
@@ -348,7 +373,11 @@
                             <input type="radio" name="onitaRequirement" id="onitaMet" value='true'>
                             <label style="line-height:30px;padding-left:20px" >Will Attend in Aug/Jan (If selected):</label>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                             <input class="col-md-offset-2" type="radio" name="onitaDate" id="onitaWillAttend">
+=======
+                            <input class="col-md-offset-2" type="radio" name="onitaDate" value='false' id="onitaWillAttend">
+>>>>>>> Stashed changes
 =======
                             <input class="col-md-offset-2" type="radio" name="onitaDate" value='false' id="onitaWillAttend">
 >>>>>>> Stashed changes
@@ -364,6 +393,7 @@
                 </div>
             </div>
         {!!  Form::close()  !!}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 </section>
 
@@ -388,6 +418,10 @@
 </body>
 
 </html>
+=======
+@endsection
+
+>>>>>>> Stashed changes
 =======
 @endsection
 
