@@ -35,11 +35,11 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<!-- custom css for dataTables
+	<!-- custom css for dataTables-->
 	<script src="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css"></script>
 	<script src="//cdn.datatables.net/fixedheader/2.1.2/css/dataTables.fixedHeader.css"></script>
 	<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css"></script>
-	-->
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -112,12 +112,12 @@
 	<!-- Custom Theme JavaScript -->
 	<script src="/js/agency.js"></script>
 
-	<!-- dataTables js library (requires jquery)
+	<!-- dataTables js library (requires jquery)-->
 	<script src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
 	<script src="//cdn.datatables.net/fixedheader/2.1.2/js/dataTables.fixedHeader.min.js"></script>
 	<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
-	<!-- custom js to use data tables
+	<!-- custom js to use data tables	-->
 	<script>
 
 		$(document).ready(function()
@@ -146,6 +146,5 @@
 
 
 	</script>
-	-->
 </body>
 </html>
