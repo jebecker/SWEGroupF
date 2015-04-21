@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('form', 'FormController@index');
 Route::post('form', 'FormController@submit');
+
 Route::get('admin', 'AdminController@index');
 Route::get('instructor', 'InstructorController@index');
 Route::get('home', 'HomeController@index');
