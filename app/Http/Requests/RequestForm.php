@@ -51,14 +51,22 @@ class RequestForm extends Request {
             'applicantTeaching' => 'max:255',
             'applicantDesired' => 'required|max:255',
             'speakOPT' => 'required_if:speakRequirement,Met|numeric',
+<<<<<<< Updated upstream
             'lastSpeak' => 'required_if:schoolStandingOption,ITA|alpha_num',
+=======
+            'lastSpeak' => 'required_if:schoolStandingOption,ITA|alpha_num|min:4|max:255',
+>>>>>>> Stashed changes
             'otherWork' =>  'max:255',
             'gatoRequirement' => 'required',
             'speakRequirement' => 'required_if:schoolStandingOption,ITA',
             'onitaRequirement' => 'required_if:schoolStandingOption,ITA',
             'onitaDate' => 'date|required_if:schoolStandingOption,ITA' /// MAY REQUIRE ADDITIONAL RULES
+<<<<<<< Updated upstream
 
         ];
+=======
+           ];
+>>>>>>> Stashed changes
     }
 
 }

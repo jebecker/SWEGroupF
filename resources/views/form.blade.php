@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,9 +88,12 @@
     @endif
     <!-- /.container-fluid -->
 </nav>
+=======
+@extends('app')
+@section('content')
+>>>>>>> Stashed changes
 
 <!-- Application Section -->
-<section id="apply">
     <div class="container">
         <!--mutli level columns-->
         <div class="col-md-8 col-md-offset-2 text-center">
@@ -176,13 +180,21 @@
                         If graduate, indicate degree:
                         <label style="line-height:30px;padding-left:20px" >
                             MS
+<<<<<<< Updated upstream
                             <input type="radio" name="gradStudentProgram" id="graduateProgramMS" value="MS">
+=======
+                            <input type="radio" name="gradStudentProgram" id="graduateProgramMS" value="Masters">
+>>>>>>> Stashed changes
                         </label>
                         <label style="line-height:30px;padding-left:10px" >
                             Phd
                             <input class="col-md-offset-2" type="radio" name="gradStudentProgram"
                                    id="graduateProgramPHD"
+<<<<<<< Updated upstream
                                    value="Phd">
+=======
+                                   value="PHD">
+>>>>>>> Stashed changes
                         </label>
                     </div>
                 </div>
@@ -223,6 +235,20 @@
             </div>
             <div class="container" style="width:inherit;">
                 <!--radio button and text input for graduate student applicant to put in level and advisor's name -->
+<<<<<<< Updated upstream
+=======
+               <div class="form-gorup" style="width: 100%;">
+                   <label class="pull-left" for="applicantHaveTaught">Course(s) you have previously taught: </label>
+                   <input type="text" class="pull-right form-control" style="width: 60%;" name="applicantHaveTaught" placeholder="e.g. CS1050">
+               </div>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <div class="container" style="width:inherit;">
+>>>>>>> Stashed changes
                 <div class="form-group" style="width:100%;">
                     <label style="line-height:30px;"  class="pull-left" for="applicantTeaching">Courses you are currently teaching: </label>
                     <input type="text" class="pull-right form-control" style="width:60%" name="applicantTeaching"
@@ -250,7 +276,11 @@
                 <div class="form-group" style="width:100%;">
                     <label style="line-height:30px;"  class="pull-left" for="applicantDesired">Other places you work: </label>
                     <input style="width:50%;" type="text" class="pull-right form-control" style="width:60%"
+<<<<<<< Updated upstream
                            name="otherWork" value="" placeholder="">
+=======
+                           name="otherWork">
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div>
@@ -261,12 +291,20 @@
                 <div class="pull-left form-group" style="width:40%;">
                     <label style="line-height:30px;" class="pull-left" for="applicantDesired">SPEAK/OPT score, if applicable:</label>
                     <input style="width:40%" type="number" class="pull-right form-control" style="width:50%"
+<<<<<<< Updated upstream
                            name="speakOPT" placeholder="">
+=======
+                           name="speakOPT">
+>>>>>>> Stashed changes
                 </div>
                 <div class="pull-right form-group" style="width:40%;">
                     <label  style="line-height:30px;" class="pull-left" for="applicantDesired">Semester of last tast:</label>
                     <input style="width:50%;" type="text" class="pull-right form-control" style="width:50%"
+<<<<<<< Updated upstream
                            name="lastSpeak" placeholder="">
+=======
+                           name="lastSpeak">
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div>
@@ -309,7 +347,11 @@
                             <label style="line-height:30px;" >Requirement Met:</label>
                             <input type="radio" name="onitaRequirement" id="onitaMet" value='true'>
                             <label style="line-height:30px;padding-left:20px" >Will Attend in Aug/Jan (If selected):</label>
+<<<<<<< Updated upstream
                             <input class="col-md-offset-2" type="radio" name="onitaDate" id="onitaWillAttend">
+=======
+                            <input class="col-md-offset-2" type="radio" name="onitaDate" value='false' id="onitaWillAttend">
+>>>>>>> Stashed changes
                         </div>
                     </li>
                 </div>
@@ -322,6 +364,7 @@
                 </div>
             </div>
         {!!  Form::close()  !!}
+<<<<<<< Updated upstream
 </section>
 
 <!-- jQuery -->
@@ -345,3 +388,7 @@
 </body>
 
 </html>
+=======
+@endsection
+
+>>>>>>> Stashed changes
