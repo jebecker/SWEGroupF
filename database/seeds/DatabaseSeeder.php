@@ -75,7 +75,7 @@ class UserTableSeeder extends Seeder {
 		]);
 
 		User::create([  'sso_id' => 'rlc5m8',
-			'name'   => 'Ray',
+			'name'   => 'Ray Chastain',
 			'email'  => 'rlc5m8@mail.missouri.edu',
 			'user_type' => 'admin',
 			'password' => bcrypt('admin')
