@@ -1,84 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+@extends('app')
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>TA/PLA Application Form</title>
-
-    <!-- Bootstrap Core CSS-->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- link to incorporate css with framework
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-    -->
-
-    <!-- Custom CSS -->
-    <link href="/css/agency.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-          type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">TA/PLA Application</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a href="/">Login</a>
-                </li>
-                <li>
-                    <a href="form">Application</a>
-                </li>
-                <li>
-                    <a href="admin">Admin</a>
-                </li>
-                <li>
-                    <a href="instructor">Instructor</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+@section('content')
 
 <!-- Admin Section -->
 <section id="admin">
@@ -147,6 +70,175 @@
                 <br>
             </div>
 
+
+            <div>
+                <br>
+            </div>
+
+            
+
+        <form class="form-horizontal"> <!-- Admin form for an administrator to select a class and assign TA/PLAs to that class-->
+            <!-- dropdown list for admin to pick the course they want to assign applicants to -->
+            <div class="container" style="width: inherit;">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h4>Assign Applicant to a Course</h4>
+                </div>
+            </div>
+            <div class="container col-md-2">
+                <label class="pull-left" for="pickCourseDropDown">Select a Course</label>
+                <select class="form-control" id="pickCourseDropDown" onchange="changeCSS();">
+                    <option value="">Select a Course</option>
+                    <option value="CS 1050">CS 1050</option>
+                    <option value="CS 2050">CS 2050</option>
+                    <option value="CS 4050">CS 4050</option>
+                    <option value="CS 4320">CS 4320</option>
+                </select>
+
+                <div>
+                    <br>
+                </div>
+
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+             <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;"><!-- NOTE: Add "hidden" before style to hide table. -->
+                <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
+                    <thead>
+                    <tr>
+                        <th>Add to Course</th>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>GPA</th>
+                        <th>Graduate/Undergrad Student</th>
+                        <th>Program and Level</th>
+                        <th>Graduate Advisor</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Anticipated Graduation Date</th>
+                        <th>Courses They Teach</th>
+                        <th>Courses They Have Taught</th>
+                        <th>Courses They Would Like To Teach</th>
+                        <th>SPEAK/OPT Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    <tr>
+                        <td id="applicantCheckBox">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox" >
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                        </td>
+                        <td id="name">John Doe</td>
+                        <td id="ID">18052537</td>
+                        <td id="GPA">3.63</td>
+                        <td id="grad_undergrad">Undergradute</td>
+                        <td id="programLevel">BS CS jr</td>
+                        <td id="gradAvisor">Adrianna Wheeler</td>
+                        <td id="phone">3141234567</td>
+                        <td id="email">jebd4f@mail.missouri.edu</td>
+                        <td id="gradDate">5/16/16</td>
+                        <td id="currentCourses">CS 1050, CS 2050</td>
+                        <td id="taughtCourses">CS 2830</td>
+                        <td id="wantedCourses">IT 4500 - A,<br> CS 3330 - A</td>
+                        <td id="speakScore">9000</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+
             <div class="container text-center" style="width:inherit;">
                 <div class="intro-text">
                     <button type="submit" class="btn btn-xl" id="adminSubmitBTN">Submit Changes</button>
@@ -158,24 +250,4 @@
 </section>
 
 
-<!-- jQuery -->
-<script src="/js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script> src="/js/bootstrap.min.js"></script>
-
-<!-- script tag to integrate js with framework
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
--->
-
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="/js/classie.js"></script>
-<script src="/js/cbpAnimatedHeader.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/agency.js"></script>
-
-</body>
-
-</html>
+@stop

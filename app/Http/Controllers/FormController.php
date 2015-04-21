@@ -45,20 +45,20 @@ class FormController extends Controller {
 			'application_type' => $request->get('schoolStandingOption'),
 			'student_id' => $request->get('applicantID'),
 			'gpa' => floatval($request->get('applicantGPA')),
-			'pla_info' => $request->get('undergradApplicantStanding','null'), // ASK TYLER WHY THIS FIELD IS NECESSARY
-			'degree_track' => $request->get('gradStudentProgram',null),
+			'pla_info' => $request->get('undergradApplicantStanding', null), // ASK TYLER WHY THIS FIELD IS NECESSARY
+			'degree_track' => $request->get('gradStudentProgram', null),
 			'advisor_name' => $request->get('advisor'),
 			'phone_number' => $request->get('phone'),
 			'email' => $request->get('email'),
 			'graduation_date' => $request->get('graduationDate'),
 			'courses_teaching' => $courses,
-			'courses_taught' => $courses,
+			'courses_taught' => $request->get('applicantHaveTaught', null),
 			'courses_and_grades' => $desired,
-			'other_employment' => $request->get('otherWork','null'),
-			'speak_score' => floatval($request->get('speakOPT','null')),
-			'sem_last_speak' => $request->get('lastSpeak','null'),
+			'other_employment' => $request->get('otherWork', null),
+			'speak_score' => floatval($request->get('speakOPT', null)),
+			'sem_last_speak' => $request->get('lastSpeak', null),
 			'gato_status' => $request->get('gatoRequirement'),
-			'onita_status' => $request->get('onitaRequirement',null),
+			'onita_status' => $request->get('onitaRequirement', null),
 			'submitted' => true
 		]);
 		return view('form')->withErrors(var_dump(auth()->user()));

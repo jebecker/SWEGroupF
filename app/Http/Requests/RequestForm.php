@@ -39,7 +39,7 @@ class RequestForm extends Request {
         $date = date("m-d-Y");
         return [
             'schoolStandingOption' => 'required',
-            'applicantName' => 'required|max:20',
+            'applicantName' => 'required|max:255',
             'applicantID' => 'required|numeric',
             'applicantGPA' => 'required|min:0|max:4',
             'undergradApplicantStanding' => 'required_if:schoolStandingOption,PLA|max:10',
@@ -56,7 +56,7 @@ class RequestForm extends Request {
             'gatoRequirement' => 'required',
             'speakRequirement' => 'required_if:schoolStandingOption,ITA',
             'onitaRequirement' => 'required_if:schoolStandingOption,ITA',
-            'onitaDate' => 'date|required_if:schoolStandingOption,ITA' /// MAY REQUIRE ADDITIONAL RULES
+            'speakDate' => 'date|required_if:schoolStandingOption,ITA' /// MAY REQUIRE ADDITIONAL RULES
            ];
     }
 

@@ -3,7 +3,8 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class Authenticate {
+
+class InstructorMiddleware {
 
 	/**
 	 * The Guard implementation.
@@ -32,6 +33,7 @@ class Authenticate {
 	 */
 	public function handle($request, Closure $next)
 	{
+		//Handle preventing guest from viewing anything but login.
 		if ($this->auth->guest())
 		{
 			if ($request->ajax())
@@ -43,10 +45,17 @@ class Authenticate {
 				return redirect()->guest('auth/login');
 			}
 		}
-		return $next($request);
 
-		// Following line can't work until form page has a link to logout.
-		//return redirect('form');
+		//if the user is logged in find out what kind of user and pas them through if they have access.
+		$type = $this->auth->user()->user_type;
+
+		if ($type == 'instructor' || $type == 'admin')
+		{
+			return $next($request);
+		}
+
+		//Else send them back to where they came from.
+		return redirect()->back()->with('message', 'Access Denied');
 	}
 
 }
