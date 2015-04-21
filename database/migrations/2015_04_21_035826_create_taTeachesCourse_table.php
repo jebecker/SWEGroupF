@@ -12,9 +12,9 @@ class CreateTaTeachesCourseTable extends Migration {
 	 */
 		public function up()
 	{
-		Schema::create('taTeachesCourse', function(Blueprint $table)
+		Schema::create('taTeachesCourses', function(Blueprint $table)
 		{
-			$table->string('ta');
+			$table->string('ta_id');
 			$table->integer('course_id')->unsigned();
 			$table->timestamps();
 			
@@ -36,7 +36,7 @@ class CreateTaTeachesCourseTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('taTeachesCourse');
+		Schema::drop('taTeachesCourses');
 	}
 
 }
