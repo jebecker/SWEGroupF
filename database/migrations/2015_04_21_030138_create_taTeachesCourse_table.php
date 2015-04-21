@@ -14,7 +14,7 @@ class CreateTaTeachesCourseTable extends Migration {
 	{
 		Schema::create('taTeachesCourse', function(Blueprint $table)
 		{
-			$table->string('ta');
+			$table->string('ta_id');
 			$table->integer('course_id')->unsigned();
 			$table->timestamps();
 			
