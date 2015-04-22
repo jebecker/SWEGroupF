@@ -6,9 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-	<!-- TODO: This is not right. This is the title for EVERY page. Needs to be dynamic or generic. -->
-	<title>TA/PLA Application Form</title>
+	
+	<title>TA/PLA Application</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
