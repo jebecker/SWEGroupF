@@ -36,8 +36,8 @@
 
 	<!-- custom css for dataTables-->
 	<script src="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css"></script>
-	<script src="//cdn.datatables.net/fixedheader/2.1.2/css/dataTables.fixedHeader.css"></script>
 	<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css"></script>
+	<script src="//cdn.datatables.net/fixedheader/2.1.0/css/dataTables.fixedHeader.min.css"></script>
 
 </head>
 <body>
@@ -63,9 +63,6 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
-									<a href="form">Application</a>
-								</li>
-								<li>
 									<a href="instructor">Instructor</a>
 								</li>
 								<li>
@@ -77,9 +74,6 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="form">Application</a>
-							</li>
 							<li>
 								<a href="admin">Admin</a>
 							</li>
@@ -133,8 +127,8 @@
 
 	<!-- dataTables js library (requires jquery)-->
 	<script src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
-	<script src="//cdn.datatables.net/fixedheader/2.1.2/js/dataTables.fixedHeader.min.js"></script>
 	<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+	<script src="//cdn.datatables.net/fixedheader/2.1.0/js/dataTables.fixedHeader.min.js"></script>
 
 	<!-- custom js to use data tables	-->
 	<script>
@@ -145,12 +139,22 @@
 
 			$('#applicationTable tbody').on('click', 'tr', function ()
 			{
-				$(this).toggleClass('active');
+				if ( $(this).hasClass('active') ) {
+					$(this).removeClass('active');
+				}
+				else {
+					table.$('tr.active').removeClass('active');
+					$(this).addClass('active');
+				}
 			});
 
 			$('#button').click( function () {
 				alert( table.rows('.active').data().length +' row(s) selected' );
 			} );
+
+			var table1 = $('#applicationTable').dataTable();
+
+			new $.fn.dataTable.FixedHeader( table1 );
 
 
 		});

@@ -1,6 +1,11 @@
 @extends('app')
 @section('content')
 <!-- Application Section -->
+<div>
+    <br>
+    <br>
+    <br>
+</div>
     <div class="container">
         <!--mutli level columns-->
         <div class="col-md-8 col-md-offset-2 text-center">

@@ -48,22 +48,22 @@
             <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;">
                 <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
                     <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Name</th>
-                        <th>Student ID</th>
-                        <th>GPA</th>
-                        <th>Graduate/Undergrad Student</th>
-                        <th>Program and Level</th>
-                        <th>Graduate Advisor</th>
-                        <th>Phone Number</th>
-                        <th>Email</th>
-                        <th>Anticipated Graduation Date</th>
-                        <th>Courses They Teach</th>
-                        <th>Courses They Have Taught</th>
-                        <th>Courses They Would Like To Teach</th>
-                        <th>SPEAK/OPT Score</th>
-                    </tr>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>GPA</th>
+                            <th>Graduate/Undergrad Student</th>
+                            <th>Program and Level</th>
+                            <th>Graduate Advisor</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Anticipated Graduation Date</th>
+                            <th>Courses They Teach</th>
+                            <th>Courses They Have Taught</th>
+                            <th>Courses They Would Like To Teach</th>
+                            <th>SPEAK/OPT Score</th>
+                        </tr>
                     </thead>
                     <tbody>
                     <tr>
@@ -197,4 +197,4 @@
 </section>
 
 
-@stop
+@endsection

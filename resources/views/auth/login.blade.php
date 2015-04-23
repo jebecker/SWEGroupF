@@ -6,6 +6,8 @@
 	<br>
 	<br>
 	<br>
+	<br>
+	<br>
 </div>
 
 <div class="container-fluid">
@@ -58,7 +60,6 @@
 									Login
 								</button>
 
-								<a href="/password/email">Forgot Your Password?</a>
 							</div>
 						</div>
 					</form>
