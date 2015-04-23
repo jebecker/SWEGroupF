@@ -159,12 +159,28 @@
 
 		});
 
-		function changeCSS(){
+		function changeCSS()
+		{
 			var elem = document.getElementById("tableDiv");
 			elem.style.display = "block";
 
 			var elem2 = document.getElementById("commentDiv");
 			elem2.style.display = "block";
+		}
+
+		function changeForm(val)
+		{
+			if(val == "PLA")
+			{
+				var elem = document.getElementById("gradStudentDiv");
+				elem.style.display = "none";
+			}
+			else
+			{
+				var elem = document.getElementById("gradStudentDiv");
+				elem.style.display = "block";
+			}
+
 		}
 
 

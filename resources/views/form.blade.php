@@ -29,19 +29,19 @@
                 <div class="radio pull-left">
                     <label style="line-height:30px;" >
                         TA (Graduate Student)
-                        <input type="radio" name="schoolStandingOption" name="graduateStudent" value="TA">
+                        <input type="radio" name="schoolStandingOption" name="graduateStudent" value="TA" onclick="changeForm(this.value);">
                     </label>
                 </div>
                 <div class="radio"">
                     <label style="line-height:30px;" >
                         PLA (Undergradute Student)
-                        <input type="radio" name="schoolStandingOption" name="undergraduteStudent" value="PLA">
+                        <input type="radio" name="schoolStandingOption" name="undergraduteStudent" value="PLA" onclick="changeForm(this.value);">
                     </label>
                 </div>
                 <div class="radio pull-right">
                     <label style="line-height:30px;" >
                         ITA (International Student)
-                        <input type="radio" name="schoolStandingOption" name="internationalStudent" value="ITA">
+                        <input type="radio" name="schoolStandingOption" name="internationalStudent" value="ITA" onclick="changeForm(this.value);">
                     </label>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <br>
             </div>
 
-            <div class="container" style="width:inherit">
+            <div class="container" id="gradStudentDiv" style="width:inherit">
                 <!--radio button and text input for graduate student applicant to put in level and advisor's name -->
                 <div class="form-group pull-left">
                     <div class="radio">
@@ -250,5 +250,6 @@
             <div class="container text-center" style="width:inherit;">
                 <button type="submit" class="btn btn-xl">Submit</button>
             </div>
+    </div>
         {!!  Form::close()  !!}
 @endsection
