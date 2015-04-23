@@ -152,9 +152,9 @@
 				alert( table.rows('.active').data().length +' row(s) selected' );
 			} );
 
-			var table1 = $('#applicationTable').dataTable();
+			//var table1 = $('#applicationTable').dataTable();
 
-			new $.fn.dataTable.FixedHeader( table1 );
+			//new $.fn.dataTable.FixedHeader( table1 );
 
 
 		});
