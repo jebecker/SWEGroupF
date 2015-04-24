@@ -11,7 +11,7 @@
             <h2>Admin Page</h2>
 
             <div class="col-md-8 col-md-offset-2 text-center">
-                <h4> Change Application Start/End Time Frame</h4>
+                <h4>Application Acceptance Window</h4>
             </div>
         </div>
     </div>
@@ -24,11 +24,61 @@
         <form class="form-inline" method="POST">
            <div class="container text-center" style="width:97%;"><!-- text inputs for admin to change the start and end time fram for the application -->
                 <div class="form-group pull-left">
-                    <label for="startDateAppTimeFrame">Enter Application Start Date</label>
+                    <label for="startDateAppTimeFrame">Enter Start Date</label>
                     <input type="text" class="form-control" id="startDateAppTimeFrame" placeholder="mm/dd/yyyy">
                 </div>
                 <div class="form-group pull-right">
-                    <label for="endDateAppTimeFrame">Enter Application End Date</label>
+                    <label for="endDateAppTimeFrame">Enter End Date</label>
+                    <input type="text" class="form-control" id="endDateAppTimeFrame" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h4>Instructor Review Window</h4>
+            </div>
+
+             <div>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="container text-center" style="width:97%;"><!-- text inputs for admin to change the start and end time fram for the application -->
+                <div class="form-group pull-left">
+                    <label for="startDateAppTimeFrame">Enter Start Date</label>
+                    <input type="text" class="form-control" id="startDateAppTimeFrame" placeholder="mm/dd/yyyy">
+                </div>
+                <div class="form-group pull-right">
+                    <label for="endDateAppTimeFrame">Enter End Date</label>
+                    <input type="text" class="form-control" id="endDateAppTimeFrame" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h4>TA/PLA Assignment Window</h4>
+            </div>
+
+             <div>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="container text-center" style="width:97%;"><!-- text inputs for admin to change the start and end time fram for the application -->
+                <div class="form-group pull-left">
+                    <label for="startDateAppTimeFrame">Enter Start Date</label>
+                    <input type="text" class="form-control" id="startDateAppTimeFrame" placeholder="mm/dd/yyyy">
+                </div>
+                <div class="form-group pull-right">
+                    <label for="endDateAppTimeFrame">Enter End Date</label>
                     <input type="text" class="form-control" id="endDateAppTimeFrame" placeholder="mm/dd/yyyy">
                 </div>
             </div>
