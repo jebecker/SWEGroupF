@@ -15,7 +15,7 @@
 
    </div>
 
-     <div class="container" style="width:1400px;margin 0 auto;">
+     <div class="container" style="margin 0 auto;">
          
         <div>
             <br>
@@ -32,20 +32,17 @@
                     <option value="CS 4050">CS 4050</option>
                     <option value="CS 4320">CS 4320</option>
                 </select>
-
-                <div>
-                    <br>
-                </div>
-
             </div>
-
-
 
             <div>
                 <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
 
-            <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;">
+            <div class="container col-md-12" id="tableDiv" hidden style="max-height: 300px; width: inherit; overflow: auto;">
                 <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
                     <thead>
                         <tr>

@@ -20,7 +20,7 @@
         <br>
     </div>
 
-    <div class="container" style="max-width:1000px;margin 0 auto;">
+    <div class="container" style="margin 0 auto;">
         <form class="form-inline" method="POST">
            <div class="container text-center" style="width:97%;"><!-- text inputs for admin to change the start and end time fram for the application -->
                 <div class="form-group pull-left">
@@ -127,7 +127,7 @@
 
             
 
-        <form class="form-horizontal"> <!-- Admin form for an administrator to select a class and assign TA/PLAs to that class-->
+             <!-- Admin form for an administrator to select a class and assign TA/PLAs to that class-->
             <!-- dropdown list for admin to pick the course they want to assign applicants to -->
             <div class="container" style="width: inherit;">
                 <div class="col-md-8 col-md-offset-2 text-center">
@@ -144,17 +144,17 @@
                     <option value="CS 4320">CS 4320</option>
                 </select>
 
-                <div>
-                    <br>
-                </div>
-
             </div>
 
             <div>
                 <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
 
-             <div class="container" id="tableDiv" hidden style="max-height: 300px; max-width: 1400px; overflow: auto;"><!-- NOTE: Add "hidden" before style to hide table. -->
+             <div class="container col-md-12" id="tableDiv" hidden style="max-height: 300px; width: inherit; overflow: auto;"><!-- NOTE: Add "hidden" before style to hide table. -->
                 <table class="table table-condensed table-bordered table-responsive display" id="applicationTable"> <!--applicant table -->
                     <thead>
                     <tr>
@@ -285,6 +285,10 @@
             </div>
 
             <div>
+                <br>
+                <br>
+                <br>
+                <br>
                 <br>
             </div>
 
