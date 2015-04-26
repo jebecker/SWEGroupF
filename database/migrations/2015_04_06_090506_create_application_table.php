@@ -28,6 +28,8 @@ class CreateApplicationTable extends Migration {
 	--	courses_taught 		- Past courses in which  the student was a TA or PLA.
 	--	courses_and_grades	- The courses for which the student is applying for and grades received in those courses.
 	--	other_employment	- Other places the applicant currently works at.
+	--  speak_status		- True if the student has met the SPEAK requirement, false if they have not but are registered
+	--  speak_date			- ONLY if speak not met already. Date student will take speak test.
 	--	speak_score			- The score on the applicant received on the SPEAK test; international students only.
 	--	sem_last_speak 		- The semester in which the applicant last took the SPEAK test; international students only.
 	--	GATO_status			- true if the student has met the GATO requirement, false if they will attend in Aug/Jan if selected.
@@ -48,23 +50,25 @@ class CreateApplicationTable extends Migration {
 		{
 			$table->increments('app_id');
 			$table->string('applicant_id');
-			$table->enum('application_type', ['TA', 'ITA', 'PLA']);
-			$table->string('name');
-			$table->string('student_id');
-			$table->decimal('gpa',3,2);
+			$table->enum('application_type', ['TA', 'ITA', 'PLA'])->nullable();
+			$table->string('name')->nullable();
+			$table->string('student_id')->nullable();
+			$table->decimal('gpa',3,2)->nullable();
 			$table->string('pla_info')->nullable();
-			$table->enum('degree_track', ['Masters', 'PHD'])->nullable();
+			$table->enum('degree_track', ['MS', 'PHD'])->nullable();
 			$table->string('advisor_name')->nullable();
-			$table->string('phone_number');
-			$table->string('email');
-			$table->date('graduation_date');
+			$table->string('phone_number')->nullable();
+			$table->string('email')->nullable();
+			$table->date('graduation_date')->nullable();
 			$table->string('courses_teaching')->nullable();
 			$table->string('courses_taught')->nullable();
 			$table->string('courses_and_grades')->nullable();
 			$table->string('other_employment')->nullable();
+			$table->boolean('speak_status')->nullable();
+			$table->date('speak_date')->nullable();
 			$table->double('speak_score')->nullable();
 			$table->string('sem_last_speak')->nullable();
-			$table->boolean('gato_status');
+			$table->boolean('gato_status')->nullable();
 			$table->boolean('onita_status')->nullable();
 			$table->boolean('submitted');
 			$table->timestamp('date_submitted')->nullable();

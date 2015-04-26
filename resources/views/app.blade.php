@@ -38,9 +38,6 @@
 	<script src="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css"></script>
 	<script src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css"></script>
 	<script src="//cdn.datatables.net/fixedheader/2.1.0/css/dataTables.fixedHeader.min.css"></script>
-
-</head>
-<body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -57,19 +54,19 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="/auth/login">Login</a></li>
+					<li><a href="/auth/login">Login</a></li>
 					@elseif(Auth::user()->user_type === "instructor")
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="instructor">Instructor</a>
-								</li>
-								<li>
-									<a href="/auth/logout">Logout</a>
-								</li>
-							</ul>
-						</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="instructor">Instructor</a>
+							</li>
+							<li>
+								<a href="/auth/logout">Logout</a>
+							</li>
+						</ul>
+					</li>
 					@elseif(Auth::user()->user_type === "admin")
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
@@ -104,7 +101,9 @@
 		</div>
 		@endif
 	</nav>
+</head>
 
+<body style="padding-top:200px;">
 	@yield('content')
 
 	<!-- jQuery -->
@@ -182,7 +181,6 @@
 			}
 
 		}
-
 
 	</script>
 </body>

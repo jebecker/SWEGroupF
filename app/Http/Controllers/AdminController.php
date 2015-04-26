@@ -33,4 +33,10 @@ class AdminController extends Controller {
 		return view('admin');
 	}
 
+	public function submit()
+	{
+
+		return view('admin')->withErrors('Submission Successful');
+	}
+
 }

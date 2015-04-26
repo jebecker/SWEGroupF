@@ -168,13 +168,13 @@ class ApplicationTableSeeder extends Seeder {
 								'name' => 'UI Bitch',
 								'student_id' => '11111111',
 								'gpa' => '4.0', //LOL Lies
-								'degree_track' => 'Masters',
+								'degree_track' => 'MS',
 								'advisor_name' => 'Dr. Grant Scott',
 								'phone_number' => '222-222-2222',
 								'email' => 'jebd4f@mail.missouri.edu',
 								'graduation_date' => Carbon::createFromDate(2015, 5),
 								'courses_and_grades' => 'cs1050 => A, cs2050 => A', //More Lies
-								'gato_status' => true,
+								'gato_status' => false,
 								'onita_status' => true,
 								'submitted' => true,
 								'date_submitted' => Carbon::now()

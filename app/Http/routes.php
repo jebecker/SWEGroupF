@@ -12,11 +12,17 @@
 */
 
 Route::get('/', 'HomeController@index');
+
 Route::get('form', 'FormController@index');
 Route::post('form', 'FormController@submit');
 
+Route::get('formselect', 'TypeController@index');
+Route::post('formselect', 'TypeController@select');
+
 Route::get('admin', 'AdminController@index');
+
 Route::get('instructor', 'InstructorController@index');
+
 Route::get('home', 'HomeController@index');
 Route::get('welcome', 'HomeController@index');
 
